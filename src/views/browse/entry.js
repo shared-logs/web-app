@@ -20,7 +20,6 @@ export default class EntryBrowser extends Component {
         const log_id = this.props.match.params.log_id
 
         Log.get(log_id, log => {
-            console.log(log);
             this.setState({ log: log })
         })
         Entry.listForLog(log_id, (list => {
@@ -33,7 +32,6 @@ export default class EntryBrowser extends Component {
     }
 
     render() {
-        console.log(this)
         const match = this.props.match
         const {log, entries} = this.state
         if (!log) return <Loading/>
