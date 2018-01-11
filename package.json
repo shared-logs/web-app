@@ -9,7 +9,7 @@
   },
   "license": "GPL-3.0",
   "private": true,
-  "homepage": "http://example.com/shared-logs-app",
+  "homepage": "http://example.com/shared-logs",
   "dependencies": {
     "bootstrap": "3.3.7",
     "react": "16.2.0",
