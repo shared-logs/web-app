@@ -1,13 +1,11 @@
 import React from "react"
 import {Button, ControlLabel, Form, FormControl, FormGroup} from "react-bootstrap";
 import Entry from "./model/Entry";
-import Authentication from "./Authentication";
 
 export default class EntryEditor extends  React.Component {
     constructor(props) {
         super(props)
         this.state = this.resetEntry(true);
-        this.auth = new Authentication()
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
     }
@@ -27,13 +25,15 @@ export default class EntryEditor extends  React.Component {
 
     handleSubmit(event) {
         event.preventDefault()
+        const { match, auth, history } = this.props
         Entry.create({
             [Entry.TITLE]: this.state.title,
             [Entry.DETAIL]: this.state.detail,
-            [Entry.LOG_ID]: this.props.match.params.log_id,
-            [Entry.USER_ID]: this.auth.currentUser().id
+            [Entry.LOG_ID]: match.params.log_id,
+            [Entry.USER_ID]: auth.user.id
         }, entry => {
             this.processSubmit(entry)
+            history.goBack();
         })
     }
 
