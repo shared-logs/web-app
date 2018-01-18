@@ -11,6 +11,7 @@ import Authentication from "./Authentication";
 import UserViewer from "./UserViewer";
 import AuthRoute from "./AuthRoute";
 import UserEditor from "./UserEditor";
+import User from "./model/User";
 
 export default class App extends React.Component {
     constructor(props) {
@@ -37,8 +38,8 @@ export default class App extends React.Component {
         })
     }
 
-    handleRegistration(callback) {
-        this.handleSignInByScreenName(callback)
+    handleRegistration(user, callback) {
+        this.handleSignInByScreenName(user[User.SCREEN_NAME], callback)
     }
 
     componentDidMount() {
