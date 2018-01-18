@@ -30,27 +30,27 @@ export default class Entry extends SharedLogsAPI{
         return `${this.created}: ${this.title}`
     }
 
-    static all(next) {
-        super.all("entries", this, next)
+    static all(callback) {
+        super.all("entries", this, callback)
     }
 
-    static get(id, next) {
-        super.get("entries", id, this, next)
+    static get(id, callback) {
+        super.get("entries", id, this, callback)
     }
 
-    static create(params, next) {
-        super.create("entries", params, this, next)
+    static create(params, callback) {
+        super.create("entries", params, this, callback)
     }
 
-    static update(id, params, next) {
-        super.update("entries", id, params, this, next)
+    static update(id, params, callback) {
+        super.update("entries", id, params, this, callback)
     }
 
-    static delete(id, next) {
-        super.delete("entries", id, this, next)
+    static delete(id, callback) {
+        super.delete("entries", id, this, callback)
     }
 
-    static listForLog(id, next) {
+    static listForLog(id, callback) {
         fetch(`${API_URL}/logs/${id}/entries`)
             .then(response => response.json())
             .then(list => {
@@ -58,7 +58,7 @@ export default class Entry extends SharedLogsAPI{
                     n[i] = new Entry(record)
                     return true;
                 })
-                next(list)
+                if (callback && typeof callback === "function") callback(list)
             })
     }
 }

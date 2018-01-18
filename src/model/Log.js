@@ -12,27 +12,27 @@ export default class Log extends SharedLogsAPI{
         if (this.device) this.device = new Device(this.device)
     }
 
-    static all(next) {
-        super.all("logs", this, next)
+    static all(callback) {
+        super.all("logs", this, callback)
     }
 
-    static get(id, next) {
-        super.get("logs", id, this, next)
+    static get(id, callback) {
+        super.get("logs", id, this, callback)
     }
 
-    static create(params, next) {
-        super.create("logs", params, this, next)
+    static create(params, callback) {
+        super.create("logs", params, this, callback)
     }
 
-    static update(id, params, next) {
-        super.update("logs", id, params, this, next)
+    static update(id, params, callback) {
+        super.update("logs", id, params, this, callback)
     }
 
-    static delete(id, next) {
-        super.delete("logs", id, this, next)
+    static delete(id, callback) {
+        super.delete("logs", id, this, callback)
     }
 
-    static listForDevice(id, next) {
+    static listForDevice(id, callback) {
         fetch(`${API_URL}/devices/${id}/logs`)
             .then(response => response.json())
             .then(list => {
@@ -40,7 +40,7 @@ export default class Log extends SharedLogsAPI{
                     n[i] = new Log(record)
                     return true
                 })
-                next(list)
+                if (callback && typeof callback === "function") callback(list)
             })
     }
 }

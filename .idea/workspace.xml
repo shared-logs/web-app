@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="809f9061-7094-4c52-bb51-289ec9781dd1" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/AuthRoute.js" afterPath="$PROJECT_DIR$/src/AuthRoute.js" />
-      <change beforePath="$PROJECT_DIR$/src/EntryEditor.js" afterPath="$PROJECT_DIR$/src/EntryEditor.js" />
+      <change beforePath="$PROJECT_DIR$/src/EntryBrowser.js" afterPath="$PROJECT_DIR$/src/EntryBrowser.js" />
+      <change beforePath="$PROJECT_DIR$/src/EntryViewer.js" afterPath="$PROJECT_DIR$/src/EntryViewer.js" />
+      <change beforePath="$PROJECT_DIR$/src/model/Device.js" afterPath="$PROJECT_DIR$/src/model/Device.js" />
+      <change beforePath="$PROJECT_DIR$/src/model/Entry.js" afterPath="$PROJECT_DIR$/src/model/Entry.js" />
+      <change beforePath="$PROJECT_DIR$/src/model/Log.js" afterPath="$PROJECT_DIR$/src/model/Log.js" />
+      <change beforePath="$PROJECT_DIR$/src/model/SharedLogsAPI.js" afterPath="$PROJECT_DIR$/src/model/SharedLogsAPI.js" />
+      <change beforePath="$PROJECT_DIR$/src/model/User.js" afterPath="$PROJECT_DIR$/src/model/User.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,47 +22,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UserEditor.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UserEditor.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1">
-              <caret line="18" column="56" lean-forward="true" selection-start-line="18" selection-start-column="56" selection-end-line="18" selection-end-column="56" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Navigation.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Navigation.js">
+      <file leaf-file-name="EntryViewer.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/EntryViewer.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
+              <caret line="9" column="51" lean-forward="false" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EntryEditor.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/EntryEditor.js">
+      <file leaf-file-name="EntryBrowser.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/EntryBrowser.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="166">
-              <caret line="27" column="36" lean-forward="false" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthRoute.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AuthRoute.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="6" column="35" lean-forward="false" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+            <state relative-caret-position="319">
+              <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -87,7 +66,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/views/BrowseEntries.js" />
         <option value="$PROJECT_DIR$/src/components/EntryForm.js" />
         <option value="$PROJECT_DIR$/src/views/LogOut.js" />
         <option value="$PROJECT_DIR$/src/components/DevicesView.js" />
@@ -105,10 +83,6 @@
         <option value="$PROJECT_DIR$/src/views/auth/in.js" />
         <option value="$PROJECT_DIR$/src/model/ApiObject.js" />
         <option value="$PROJECT_DIR$/src/model/API.js" />
-        <option value="$PROJECT_DIR$/src/model/User.js" />
-        <option value="$PROJECT_DIR$/src/model/Device.js" />
-        <option value="$PROJECT_DIR$/src/model/Entry.js" />
-        <option value="$PROJECT_DIR$/src/model/Log.js" />
         <option value="$PROJECT_DIR$/src/views/App.js" />
         <option value="$PROJECT_DIR$/src/components/AuthenticatedRoute.js" />
         <option value="$PROJECT_DIR$/src/components/device/component.js" />
@@ -120,8 +94,6 @@
         <option value="$PROJECT_DIR$/src/DeviceThumbnail.js" />
         <option value="$PROJECT_DIR$/src/DeviceViewer.js" />
         <option value="$PROJECT_DIR$/src/LogBrowser.js" />
-        <option value="$PROJECT_DIR$/src/EntryBrowser.js" />
-        <option value="$PROJECT_DIR$/src/EntryViewer.js" />
         <option value="$PROJECT_DIR$/src/LogViewer.js" />
         <option value="$PROJECT_DIR$/src/UserBrowser.js" />
         <option value="$PROJECT_DIR$/src/Logout.js" />
@@ -138,6 +110,13 @@
         <option value="$PROJECT_DIR$/src/UserEditor.js" />
         <option value="$PROJECT_DIR$/src/AuthRoute.js" />
         <option value="$PROJECT_DIR$/src/EntryEditor.js" />
+        <option value="$PROJECT_DIR$/src/model/SharedLogsAPI.js" />
+        <option value="$PROJECT_DIR$/src/model/Device.js" />
+        <option value="$PROJECT_DIR$/src/model/Entry.js" />
+        <option value="$PROJECT_DIR$/src/model/Log.js" />
+        <option value="$PROJECT_DIR$/src/model/User.js" />
+        <option value="$PROJECT_DIR$/src/EntryBrowser.js" />
+        <option value="$PROJECT_DIR$/src/EntryViewer.js" />
       </list>
     </option>
   </component>
@@ -187,6 +166,12 @@
               <item name="shared-logs-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="shared-logs-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shared-logs-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shared-logs-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -265,12 +250,12 @@
       <workItem from="1516032012533" duration="832000" />
       <workItem from="1516044604222" duration="15046000" />
       <workItem from="1516218992260" duration="11694000" />
-      <workItem from="1516302751650" duration="4842000" />
+      <workItem from="1516302751650" duration="6039000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132322000" />
+    <option name="totallyTimeSpent" value="133519000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -332,7 +317,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <option name="time" value="8" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -344,13 +329,6 @@
     <entry file="file://$PROJECT_DIR$/src/components/entry/editor.js" />
     <entry file="file://$PROJECT_DIR$/src/components/entry/list.js" />
     <entry file="file://$PROJECT_DIR$/src/components/log/list.js" />
-    <entry file="file://$PROJECT_DIR$/src/model/Log.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/AuthenticatedRoute.js" />
     <entry file="file://$PROJECT_DIR$/src/views/App.js" />
     <entry file="file://$PROJECT_DIR$/src/components/Loading.js" />
@@ -365,21 +343,6 @@
     <entry file="file://$PROJECT_DIR$/src/views/browse/device.js" />
     <entry file="file://$PROJECT_DIR$/src/views/browse/entry.js" />
     <entry file="file://$PROJECT_DIR$/src/views/browse/log.js" />
-    <entry file="file://$PROJECT_DIR$/src/model/Device.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/SharedLogsAPI.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="32" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -395,14 +358,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="24" column="53" lean-forward="false" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Entry.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -439,22 +394,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/EntryViewer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/EntryBrowser.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="24" column="1" lean-forward="false" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/DeviceViewer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -469,6 +408,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
           <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -507,14 +447,6 @@
           <folding>
             <element signature="e#0#37#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -581,6 +513,64 @@
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Device.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="48" column="30" lean-forward="false" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Entry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="48" column="30" lean-forward="false" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Log.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="39" column="0" lean-forward="true" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/SharedLogsAPI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="69" column="64" lean-forward="false" selection-start-line="69" selection-start-column="16" selection-end-line="69" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EntryBrowser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EntryViewer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="51" lean-forward="false" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -30,23 +30,23 @@ export default class Device extends SharedLogsAPI {
         this._name = value
     }
 
-    static all(next) {
-        super.all("devices", this, next)
+    static all(callback) {
+        super.all("devices", this, callback)
     }
 
-    static get(id, next) {
-        super.get("devices", id, this, next)
+    static get(id, callback) {
+        super.get("devices", id, this, callback)
     }
 
-    static create(params, next) {
-        super.create("devices", params, this, next)
+    static create(params, callback) {
+        super.create("devices", params, this, callback)
     }
 
-    static update(id, params, next) {
-        super.update("devices", id, params, this, next)
+    static update(id, params, callback) {
+        super.update("devices", id, params, this, callback)
     }
 
-    static delete(id, next) {
-        super.delete("devices", id, this, next)
+    static delete(id, callback) {
+        super.delete("devices", id, this, callback)
     }
 }

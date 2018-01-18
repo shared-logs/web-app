@@ -30,31 +30,31 @@ export default class User extends SharedLogsAPI {
         return (this.first_name || this.last_name ? `${this.first_name} ${this.last_name}` : this.screen_name)
     }
 
-    static all(next) {
-        super.all("users", this, next)
+    static all(callback) {
+        super.all("users", this, callback)
     }
 
-    static get(id, next) {
-        super.get("users", id, this, next)
+    static get(id, callback) {
+        super.get("users", id, this, callback)
     }
 
-    static lookupByScreenName(screen_name, next) {
+    static lookupByScreenName(screen_name, callback) {
         fetch(`${API_URL}/users/${screen_name}`)
             .then(response => response.json())
             .then(jsonData => {
-                next(new User(jsonData))
+                if (callback && typeof callback === "function") callback(new User(jsonData))
             })
     }
 
-    static create(params, next) {
-        super.create("users", params, this, next)
+    static create(params, callback) {
+        super.create("users", params, this, callback)
     }
 
-    static update(id, params, next) {
-        super.update("users", id, params, this, next)
+    static update(id, params, callback) {
+        super.update("users", id, params, this, callback)
     }
 
-    static delete(id, next) {
-        super.delete("users", id, this, next)
+    static delete(id, callback) {
+        super.delete("users", id, this, callback)
     }
 }

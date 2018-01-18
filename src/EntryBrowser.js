@@ -1,7 +1,7 @@
 import React from "react"
 import Entry from "./model/Entry";
-import {PanelGroup} from "react-bootstrap";
 import EntryViewer from "./EntryViewer";
+import {Table} from "react-bootstrap";
 
 export default class EntryBrowser extends React.Component {
     constructor(props) {
@@ -16,10 +16,12 @@ export default class EntryBrowser extends React.Component {
     }
 
     render() {
-        return <PanelGroup>
+        return <Table striped hover>
+            <tbody>
             {this.state.entries.map(entry => (
-                <EntryViewer key={entry.id} entry={entry}/>
+                <tr key={entry.id}><td><EntryViewer entry={entry}/></td></tr>
             ))}
-        </PanelGroup>
+            </tbody>
+        </Table>
     }
 }

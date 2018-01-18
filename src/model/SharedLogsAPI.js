@@ -19,7 +19,7 @@ export default class SharedLogsAPI {
         return "modified"
     }
 
-    static all(table, type, next) {
+    static all(table, type, callback) {
         fetch(`${API_URL}/${table}`)
             .then(response => response.json())
             .then(list => {
@@ -27,19 +27,19 @@ export default class SharedLogsAPI {
                     n[i] = new type(e)
                     return true
                 })
-                next(list)
+                if (callback && typeof callback === "function") callback(list)
             })
     }
 
-    static get(table, id, type, next) {
+    static get(table, id, type, callback) {
         fetch(`${API_URL}/${table}/${id}`)
             .then(response => response.json())
             .then(record => {
-                next(new type(record))
+                if (callback && typeof callback === "function") callback(new type(record))
             })
     }
 
-    static create(table, params, type, next) {
+    static create(table, params, type, callback) {
         fetch(`${API_URL}/${table}`, {
             method: "post",
             headers: { "Content-Type": "application/json" },
@@ -47,11 +47,11 @@ export default class SharedLogsAPI {
         })
             .then(response => response.json())
             .then(record => {
-                next(new type(record))
+                if (callback && typeof callback === "function") callback(new type(record))
             })
     }
 
-    static update(table, params, type, next) {
+    static update(table, params, type, callback) {
         fetch(`${API_URL}/${table}`, {
             method: "put",
             headers: { "Content-Type": "application/json" },
@@ -59,15 +59,15 @@ export default class SharedLogsAPI {
         })
             .then(response => response.json())
             .then(record => {
-                next(new type(record))
+                if (callback && typeof callback === "function") callback(new type(record))
             })
     }
 
-    static delete(table, id, type, next) {
+    static delete(table, id, type, callback) {
         fetch(`${API_URL}/${table}/${id}`, { method: "delete" })
             .then(response => response.json())
             .then(record => {
-                next(new type(record))
+                if (callback && typeof callback === "function") callback(new type(record))
             })
     }
 }
