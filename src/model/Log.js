@@ -1,6 +1,5 @@
 import Device from "./Device";
 import SharedLogsAPI from "./SharedLogsAPI";
-import {API_URL} from "../config";
 
 export default class Log extends SharedLogsAPI{
     static get NAME() {
@@ -33,7 +32,7 @@ export default class Log extends SharedLogsAPI{
     }
 
     static listForDevice(id, callback) {
-        fetch(`${API_URL}/devices/${id}/logs`)
+        fetch(`${process.env.REACT_APP_API_URL}/devices/${id}/logs`)
             .then(response => response.json())
             .then(list => {
                 list.map((record, i, n) => {

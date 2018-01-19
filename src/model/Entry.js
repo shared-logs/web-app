@@ -1,4 +1,3 @@
-import {API_URL} from "../config";
 import Log from "./Log";
 import User from "./User";
 import SharedLogsAPI from "./SharedLogsAPI";
@@ -51,7 +50,7 @@ export default class Entry extends SharedLogsAPI{
     }
 
     static listForLog(id, callback) {
-        fetch(`${API_URL}/logs/${id}/entries`)
+        fetch(`${process.env.REACT_APP_API_URL}/logs/${id}/entries`)
             .then(response => response.json())
             .then(list => {
                 list.map((record, i, n) => {

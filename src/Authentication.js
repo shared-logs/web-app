@@ -1,4 +1,3 @@
-import {USER_COOKIE} from "./config";
 import * as cookie from "react-cookies";
 import User from "./model/User";
 
@@ -14,7 +13,7 @@ export default class Authentication {
     }
 
     signInByCookie(callback) {
-        const screen_name = cookie.load(USER_COOKIE)
+        const screen_name = cookie.load(process.env.REACT_APP_USER_COOKIE)
         if (screen_name) this.signInByScreenName(screen_name, callback)
     }
 
@@ -23,14 +22,14 @@ export default class Authentication {
             this.user = user
             var expiration = new Date()
             expiration.setFullYear(expiration.getFullYear()+1)
-            cookie.save(USER_COOKIE, user[User.SCREEN_NAME], { expires:  expiration})
+            cookie.save(process.env.REACT_APP_USER_COOKIE, user[User.SCREEN_NAME], { expires:  expiration})
             if (callback && typeof callback === "function") callback(new AuthState(this))
         })
     }
 
     signOut(callback) {
         this.user = null;
-        cookie.remove(USER_COOKIE)
+        cookie.remove(process.env.REACT_APP_USER_COOKIE)
         if (callback && typeof callback === "function") callback(new AuthState(this))
     }
 }

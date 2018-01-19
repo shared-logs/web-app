@@ -1,6 +1,3 @@
-import SharedLogsAPI from "./SharedLogsAPI";
-import {API_URL} from "../config";
-
 export default class User extends SharedLogsAPI {
     static get SCREEN_NAME() {
         return "screen_name"
@@ -39,7 +36,7 @@ export default class User extends SharedLogsAPI {
     }
 
     static lookupByScreenName(screen_name, callback) {
-        fetch(`${API_URL}/users/${screen_name}`)
+        fetch(`${process.env.REACT_APP_API_URL}/users/${screen_name}`)
             .then(response => response.json())
             .then(jsonData => {
                 if (callback && typeof callback === "function") callback(new User(jsonData))

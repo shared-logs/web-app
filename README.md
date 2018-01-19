@@ -3,7 +3,6 @@
 ### Install
 
   1. `npm install`
-  2. Edit `src/config.js` to match your environment
-  3. Edit the `package.json` `homepage` entry to reflect the eventual location of the app 
-  3. `npm build`
-  4. Move the contents of the `build` directory to their destination
+  2. Create `.env.local` with any necessary overrides of `.env` to match your environment
+  3. `npm run build`
+  4. Move/symlink/whatevs the contents of the `build` directory to their destination

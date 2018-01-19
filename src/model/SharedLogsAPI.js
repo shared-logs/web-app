@@ -1,5 +1,3 @@
-import {API_URL} from "../config";
-
 export default class SharedLogsAPI {
     constructor(record) {
         for (const prop in record) {
@@ -20,7 +18,7 @@ export default class SharedLogsAPI {
     }
 
     static all(table, type, callback) {
-        fetch(`${API_URL}/${table}`)
+        fetch(`${process.env.REACT_APP_API_URL}/${table}`)
             .then(response => response.json())
             .then(list => {
                 list.map((e, i, n) => {
@@ -32,7 +30,7 @@ export default class SharedLogsAPI {
     }
 
     static get(table, id, type, callback) {
-        fetch(`${API_URL}/${table}/${id}`)
+        fetch(`${process.env.REACT_APP_API_URL}/${table}/${id}`)
             .then(response => response.json())
             .then(record => {
                 if (callback && typeof callback === "function") callback(new type(record))
@@ -40,7 +38,7 @@ export default class SharedLogsAPI {
     }
 
     static create(table, params, type, callback) {
-        fetch(`${API_URL}/${table}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/${table}`, {
             method: "post",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(params)
@@ -52,7 +50,7 @@ export default class SharedLogsAPI {
     }
 
     static update(table, params, type, callback) {
-        fetch(`${API_URL}/${table}`, {
+        fetch(`${process.env.REACT_APP_API_URL}/${table}`, {
             method: "put",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(params)
@@ -64,7 +62,7 @@ export default class SharedLogsAPI {
     }
 
     static delete(table, id, type, callback) {
-        fetch(`${API_URL}/${table}/${id}`, { method: "delete" })
+        fetch(`${process.env.REACT_APP_API_URL}/${table}/${id}`, { method: "delete" })
             .then(response => response.json())
             .then(record => {
                 if (callback && typeof callback === "function") callback(new type(record))
