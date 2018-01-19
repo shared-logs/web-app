@@ -1,6 +1,6 @@
 import React from "react"
 import {Table} from "react-bootstrap";
-import Device from "./model/Device";
+import Device from "../../model/Device";
 import {Link} from "react-router-dom";
 
 export default class DeviceBrowser extends React.Component {

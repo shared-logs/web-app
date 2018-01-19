@@ -1,6 +1,6 @@
 import React from "react"
 import {Button, ControlLabel, Form, FormControl, FormGroup} from "react-bootstrap";
-import Entry from "./model/Entry";
+import Entry from "../../model/Entry";
 
 export default class EntryEditor extends  React.Component {
     constructor(props) {

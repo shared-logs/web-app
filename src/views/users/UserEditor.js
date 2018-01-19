@@ -1,6 +1,6 @@
 import React from "react"
 import {Button, ControlLabel, Form, FormControl, FormGroup} from "react-bootstrap";
-import User from "./model/User";
+import User from "../../model/User";
 import {Redirect} from "react-router-dom";
 
 export default class UserEditor extends React.Component {

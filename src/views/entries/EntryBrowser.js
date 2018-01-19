@@ -1,5 +1,5 @@
 import React from "react"
-import Entry from "./model/Entry";
+import Entry from "../../model/Entry";
 import EntryViewer from "./EntryViewer";
 import {Table} from "react-bootstrap";
 

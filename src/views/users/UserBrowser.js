@@ -1,6 +1,6 @@
 import React from "react"
 import {Table} from "react-bootstrap";
-import User from "./model/User";
+import User from "../../model/User";
 
 export default class UserBrowser extends React.Component {
     constructor(props) {

@@ -1,6 +1,6 @@
 import React from "react"
 import {Table} from "react-bootstrap";
-import Log from "./model/Log";
+import Log from "../../model/Log";
 import {Link} from "react-router-dom";
 
 export default class LogBrowser extends React.Component {

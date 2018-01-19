@@ -1,6 +1,6 @@
 import React from "react"
-import EntryBrowser from "./EntryBrowser";
-import Log from "./model/Log";
+import EntryBrowser from "../entries/EntryBrowser";
+import Log from "../../model/Log";
 import {Button} from "react-bootstrap";
 import {LinkContainer} from "react-router-bootstrap";
 

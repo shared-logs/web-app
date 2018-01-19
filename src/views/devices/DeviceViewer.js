@@ -1,6 +1,6 @@
 import React from "react"
-import Device from "./model/Device";
-import LogBrowser from "./LogBrowser";
+import Device from "../../model/Device";
+import LogBrowser from "../logs/LogBrowser";
 
 export default class DeviceViewer extends React.Component {
     constructor(props) {

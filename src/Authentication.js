@@ -21,7 +21,9 @@ export default class Authentication {
     signInByScreenName(screen_name, callback) {
         User.lookupByScreenName(screen_name, user => {
             this.user = user
-            cookie.save(USER_COOKIE, user[User.SCREEN_NAME])
+            var expiration = new Date()
+            expiration.setFullYear(expiration.getFullYear()+1)
+            cookie.save(USER_COOKIE, user[User.SCREEN_NAME], { expires:  expiration})
             if (callback && typeof callback === "function") callback(new AuthState(this))
         })
     }

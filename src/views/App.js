@@ -1,17 +1,17 @@
 import React from "react"
-import DeviceBrowser from "./DeviceBrowser";
-import UserBrowser from "./UserBrowser";
+import DeviceBrowser from "./devices/DeviceBrowser";
+import UserBrowser from "./users/UserBrowser";
 import Navigation from "./Navigation";
 import {Route} from "react-router-dom";
-import DeviceViewer from "./DeviceViewer";
-import LogViewer from "./LogViewer";
-import EntryEditor from "./EntryEditor";
+import DeviceViewer from "./devices/DeviceViewer";
+import LogViewer from "./logs/LogViewer";
+import EntryEditor from "./entries/EntryEditor";
 import Login from "./Login";
-import Authentication from "./Authentication";
-import UserViewer from "./UserViewer";
-import AuthRoute from "./AuthRoute";
-import UserEditor from "./UserEditor";
-import User from "./model/User";
+import Authentication from "../Authentication";
+import UserViewer from "./users/UserViewer";
+import AuthRoute from "../AuthRoute";
+import UserEditor from "./users/UserEditor";
+import User from "../model/User";
 
 export default class App extends React.Component {
     constructor(props) {
@@ -61,7 +61,7 @@ export default class App extends React.Component {
                 <Route path="/login" render={(props) => (
                     <Login {...props} onSignInByScreenName={this.handleSignInByScreenName} auth={auth}/>
                 )}/>
-                <AuthRoute path="/profile" component={UserViewer} auth={auth}/>
+                <AuthRoute path="/profile" component={UserViewer} auth={auth} user={auth.user}/>
                 <Route path="/register" render={(props) => (
                     <UserEditor {...props} onSubmit={this.handleRegistration}/>
                 )}/>
