@@ -1,3 +1,5 @@
+import SharedLogsAPI from "./SharedLogsAPI";
+
 export default class User extends SharedLogsAPI {
     static get SCREEN_NAME() {
         return "screen_name"
