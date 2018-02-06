@@ -1,0 +1,5 @@
+filter:
+    excluded_paths: [.idea/*, doc/*, examples/*, tests/*]
+
+checks:
+    javascript: true
