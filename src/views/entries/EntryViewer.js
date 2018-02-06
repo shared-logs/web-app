@@ -1,4 +1,5 @@
 import React from "react"
+import Markdown from "react-markdown"
 
 export default class EntryViewer extends React.Component {
     render() {
@@ -6,7 +7,7 @@ export default class EntryViewer extends React.Component {
         if (entry) {
             return <div>
                     <h4>{entry.title} <small>{entry.created}</small></h4>
-                    <p>{entry.detail}</p>
+                    <Markdown source={entry.detail}/>
                 <p><small>{entry.user.name}</small></p>
             </div>
         } else {
