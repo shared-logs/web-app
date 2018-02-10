@@ -1,5 +1,7 @@
 # Shared Logs App
 
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/shared-logs/web-app/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/shared-logs/web-app/?branch=master)
+
 ### Install
 
   1. `npm install`
