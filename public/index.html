@@ -8,12 +8,36 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    * {
+        margin: 0;
+    }
+
+    html, body {
+        height: 100%;
+    }
+
+    .wrapper {
+        min-height: 100%;
+        margin: 0 auto -3em;
+    }
+
+    .footer, .push {
+        height: 3em;
+    }
+    </style>
     <title>Shared Logs</title>
   </head>
   <body>
     <noscript>
       You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root"></div>
+    <div class="wrapper">
+        <div id="root"></div>
+        <div class="push"></div>
+    </div>
+    <div class="footer">
+        <p class="text-center"><small>This is an <a target="_blank" href="https://github/shared-logs">open source</a> project. Please contribute and improve!</small></p>
+    </div>
   </body>
 </html>
