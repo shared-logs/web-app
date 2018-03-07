@@ -131,7 +131,7 @@ $RECYCLE.BIN/
 # Custom ignores
 
 # production
-/build
+/dist
 
 # misc
 .env.local
