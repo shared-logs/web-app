@@ -3,7 +3,6 @@
     el-card.device(v-for='device in devices', :key='device.id')
       div(slot='header') {{ device.name }}
       img.icon(src='https://assets.pcmag.com/media/images/417422-flashforge-finder-3d-printer.jpg?width=810&height=456')
-      sub {{ device.model }}
 </template>
 
 <script>
@@ -29,6 +28,7 @@ export default {
     flex-flow: row wrap;
     justify-content: center;
     min-height: 200px;
+    padding: 20px;
   }
 
   .device {
@@ -38,6 +38,7 @@ export default {
 
   .icon {
     width: 100%;
-    height: 100%;
+    height: 260px;
+    object-fit: cover;
   }
 </style>
