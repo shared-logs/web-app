@@ -1,14 +1,19 @@
 <template lang="pug">
   #devices(v-loading='!devices.length')
-    el-card.device(v-for='device in devices', :key='device.id')
-      div(slot='header') {{ device.name }}
-      img.icon(src='https://assets.pcmag.com/media/images/417422-flashforge-finder-3d-printer.jpg?width=810&height=456')
-    .phantom(v-for='i in devices.length - 2', :key='i')
+    .device(v-for='device in devices', :key='device.id', @click='clickDevice(device.id)')
+      el-card
+        div(v-if='isMobile')
+          div {{ device.name }}
+        div(v-else)
+          div(slot='header') {{ device.name }}
+          img.icon(src='https://assets.pcmag.com/media/images/417422-flashforge-finder-3d-printer.jpg?width=810&height=456')
+    .phantom(v-for='i in devices.length', :key='i + devices.length')
 </template>
 
 <script>
 export default {
   name: 'HelloWorld',
+  props: ['isMobile'],
   data () {
     return {
       devices: []
@@ -18,6 +23,11 @@ export default {
     this.$api.access('/devices')
       .then((response) => { this.devices = response.data })
       .catch(() => this.$message.error('An error occured. Please try again later'))
+  },
+  methods: {
+    clickDevice (device) {
+      console.log('Device ' + device + ' clicked.')
+    }
   }
 }
 </script>
@@ -29,12 +39,24 @@ export default {
     flex-flow: row wrap;
     justify-content: center;
     min-height: 200px;
-    padding: 20px;
   }
 
   .device, .phantom {
     margin: 10px;
     max-width: 300px;
+  }
+
+  @media screen and (max-width: 684px) {
+    .device {
+      max-width: none;
+      max-height: 62px;
+      text-align: center;
+      flex-grow: 1;
+    }
+
+    .phantom {
+      display: none;
+    }
   }
 
   .icon {

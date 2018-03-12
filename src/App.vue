@@ -3,15 +3,27 @@
     el-header.header
       el-menu.menu(mode='horizontal')
         a#name(href='/') Shared Logs
-        el-menu-item(index='1') Devices
-        el-menu-item(index='2') Entries
-    el-body
-      router-view
+        el-menu-item
+    el-main
+      router-view(:isMobile='isMobile')
 </template>
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  data () {
+    return {
+      isMobile: window.innerWidth <= 684
+    }
+  },
+  created () {
+    window.addEventListener('resize', this.handleResize)
+  },
+  methods: {
+    handleResize () {
+      this.isMobile = window.innerWidth <= 684
+    }
+  }
 }
 </script>
 
@@ -24,6 +36,7 @@ export default {
 
   #name {
     text-decoration: none;
+    height: 60px;
     line-height: 60px;
     color: black;
     position: absolute;
@@ -33,6 +46,7 @@ export default {
   #name:focus { outline: none; }
 
   .menu {
+    min-height: 60px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
