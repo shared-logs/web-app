@@ -3,7 +3,6 @@
     el-header.header
       el-menu.menu(mode='horizontal')
         a#name(href='/') Shared Logs
-        el-menu-item
     el-main
       router-view(:isMobile='isMobile')
 </template>

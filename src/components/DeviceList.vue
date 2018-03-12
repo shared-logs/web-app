@@ -21,12 +21,12 @@ export default {
   },
   created () {
     this.$api.access('/devices')
-      .then((response) => { this.devices = response.data })
+      .then((response) => { this.devices = response.data.json })
       .catch(() => this.$message.error('An error occured. Please try again later'))
   },
   methods: {
-    clickDevice (device) {
-      console.log('Device ' + device + ' clicked.')
+    clickDevice (id) {
+      this.$router.push({ path: `device/${id}` })
     }
   }
 }
@@ -44,6 +44,10 @@ export default {
   .device, .phantom {
     margin: 10px;
     max-width: 300px;
+  }
+
+  .device {
+    cursor: pointer;
   }
 
   @media screen and (max-width: 684px) {

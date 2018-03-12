@@ -31,7 +31,7 @@ api.access = (url) => {
     // get yahoo's yql API with url
     api.get('https://query.yahooapis.com/v1/public/yql?q=SELECT * FROM json WHERE url="' + url + '"&format=json')
       .then((response) => {
-        response.data = response.data.query.results.json.json
+        response.data = response.data.query.results.json
         resolve(response)
       })
       .then(reject)
