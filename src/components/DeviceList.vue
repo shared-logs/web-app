@@ -6,13 +6,13 @@
           div {{ device.name }}
         div(v-else)
           div(slot='header') {{ device.name }}
-          img.icon(src='https://assets.pcmag.com/media/images/417422-flashforge-finder-3d-printer.jpg?width=810&height=456')
+          img.icon(:src='device.img || "https://assets.pcmag.com/media/images/417422-flashforge-finder-3d-printer.jpg?width=810&height=456"')
     .phantom(v-for='i in devices.length', :key='i + devices.length')
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'DeviceList',
   props: ['isMobile'],
   data () {
     return {

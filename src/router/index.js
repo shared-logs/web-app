@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 import DeviceList from '@/components/DeviceList'
 import Device from '@/components/Device'
+import Logs from '@/components/Logs'
 
 Vue.use(Router)
 
@@ -18,6 +19,11 @@ export default new Router({
       path: '/device/:id',
       name: 'Device',
       component: Device
+    },
+    {
+      path: '/device/:deviceid/logs/:logid',
+      name: 'Logs',
+      component: Logs
     }
   ]
 })
