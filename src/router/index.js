@@ -24,6 +24,10 @@ export default new Router({
       path: '/device/:deviceid/logs/:logid',
       name: 'Logs',
       component: Logs
+    },
+    {
+      path: '*',
+      redirect: '/'
     }
   ]
 })

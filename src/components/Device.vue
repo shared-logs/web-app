@@ -10,7 +10,8 @@
           span.subtag {{ device.model }}
       .row
         .log(v-for='log in logs', :key='log.id')
-          span.link.tag(@click='clickLog(log.id)') {{ log.name }}
+          router-link.no-decoration(:to='device.id + "/logs/" + log.id')
+            span.link.tag {{ log.name }}
           span.log-modified.pull-right {{ log.modified | moment('from') }}
 </template>
 
@@ -82,6 +83,11 @@ export default {
 .h1 {
   font-size: 32px;
   font-weight: bold;
+}
+
+.no-decoration {
+  color: initial;
+  text-decoration: none;
 }
 
 .link {

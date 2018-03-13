@@ -2,7 +2,7 @@
   #app
     el-header.header
       el-menu.menu(mode='horizontal')
-        a#name(href='/') Shared Logs
+        router-link#name.no-decoration(to='/') Shared Logs
         #signin(@click='handleSignIn') Sign In
     el-main
       router-view(:isMobile='isMobile')
@@ -38,10 +38,16 @@ export default {
     z-index: 100;
   }
 
+  .no-decoration {
+    outline: none;
+    color: initial;
+    text-decoration: none;
+  }
+
   #name {
     text-decoration: none;
-    height: 60px;
-    line-height: 60px;
+    height: 61px;
+    line-height: 61px;
     color: black;
     position: absolute;
     left: 0;
@@ -51,8 +57,8 @@ export default {
     position: absolute;
     right: 0;
     float: left;
-    height: 60px;
-    line-height: 60px;
+    height: 61px;
+    line-height: 61px;
     outline: none;
     margin: 0;
     padding: 0 20px;
