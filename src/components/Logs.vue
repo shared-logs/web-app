@@ -1,13 +1,19 @@
 <template lang="pug">
-  #logs(v-loading='!entries.length')
-    .container(v-if='entries.length')
+  #logs(v-loading='!entries.length || !device.id')
+    .container(v-if='entries.length && device.id')
+      .header
+        router-link.no-decoration(:to='"/device/" + device.id')
+          span.h1.link {{ device.name }}
+        span.tag {{ device.id ? '#' + device.id : null }}
+        span.device-modified.pull-right {{ device.modified | moment('from') }}
+      .add + Add Entry
       .entry(v-for='entry in entries', :key='entry.id')
         .row
           span.h1 {{ entry.title }}
           span.tag {{ '#' + entry.id }}
         .row
           span {{ entry.user.first_name + ' ' + entry.user.last_name}}
-          span.modified {{ entry.modified }}
+          span.modified {{ entry.modified | moment('from') }}
         .row
           vue-markdown {{ entry.detail }}
 </template>
@@ -20,7 +26,8 @@ export default {
   components: { VueMarkdown },
   data () {
     return {
-      entries: {}
+      device: {},
+      entries: []
     }
   },
   created () {
@@ -29,7 +36,12 @@ export default {
     this.$api.access(`/logs/${id}/entries`)
       .then((response) => {
         this.entries = response.data.json ? response.data.json : [ response.data ]
-        console.log(this.entries)
+      })
+      .catch(() => this.$message.error('An error occured. Please try again later'))
+
+    this.$api.access(`/devices/${id}`)
+      .then((response) => {
+        this.device = response.data
       })
       .catch(() => this.$message.error('An error occured. Please try again later'))
   }
@@ -46,6 +58,27 @@ export default {
 .container {
   max-width: 100%;
   margin: 0 auto;
+}
+
+.header { position: relative; }
+
+.device-modified {
+  height: 44px;
+  line-height: 44px;
+  position: absolute;
+  right: 0;
+}
+
+.add {
+  text-align: center;
+  color: #575A65;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 13px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-top: solid 1px #e6e6e6;
+  border-bottom: solid 1px #e6e6e6;
 }
 
 .entry {
@@ -70,7 +103,19 @@ export default {
   font-weight: bold;
 }
 
-.pull-right { float: right; }
+.no-decoration {
+  color: initial;
+  text-decoration: none;
+}
+
+.link {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.link:active {
+  color: rgb(128, 128, 128);
+}
 
 /* container media queries */
 

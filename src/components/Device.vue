@@ -5,13 +5,13 @@
         .row
           span.h1 {{ device.name }}
           span.tag {{ device.id ? '#' + device.id : null }}
-          span.device-modified.pull-right {{ device.modified }}
+          span.device-modified.pull-right {{ device.modified | moment('from') }}
         .row
           span.subtag {{ device.model }}
       .row
         .log(v-for='log in logs', :key='log.id')
           span.link.tag(@click='clickLog(log.id)') {{ log.name }}
-          span.log-modified.pull-right {{ log.modified }}
+          span.log-modified.pull-right {{ log.modified | moment('from') }}
 </template>
 
 <script>
@@ -29,8 +29,7 @@ export default {
     this.$api.access(`/devices/${id}`)
       .then((response) => {
         this.device = response.data
-        this.logs = this.device.logs.length ? this.device.logs : [ this.device.logs ]
-        console.log(this.logs)
+        this.logs = this.device.logs.json ? this.device.logs.json : [ this.device.logs ]
       })
       .catch(() => this.$message.error('An error occured. Please try again later'))
   },

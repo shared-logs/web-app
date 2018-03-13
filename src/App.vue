@@ -3,6 +3,7 @@
     el-header.header
       el-menu.menu(mode='horizontal')
         a#name(href='/') Shared Logs
+        #signin(@click='handleSignIn') Sign In
     el-main
       router-view(:isMobile='isMobile')
 </template>
@@ -21,6 +22,9 @@ export default {
   methods: {
     handleResize () {
       this.isMobile = window.innerWidth <= 684
+    },
+    handleSignIn () {
+      console.log('Signin')
     }
   }
 }
@@ -41,6 +45,20 @@ export default {
     color: black;
     position: absolute;
     left: 0;
+  }
+
+  #signin {
+    position: absolute;
+    right: 0;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    outline: none;
+    margin: 0;
+    padding: 0 20px;
+    font-size: 14px;
+    color: #909399;
+    cursor: pointer;
   }
 
   #name:focus { outline: none; }

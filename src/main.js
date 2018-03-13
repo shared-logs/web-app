@@ -11,8 +11,14 @@ import 'element-ui/lib/theme-chalk/index.css'
 // axios
 import axios from 'axios'
 
+// vue-moment
+import VueMoment from 'vue-moment'
+
 // add element-ui to vue
 Vue.use(Element)
+
+// add vue-moment to vue
+Vue.use(VueMoment)
 
 // add axios to the Vue object
 Object.defineProperty(Vue.prototype, '$axios', { value: axios })
