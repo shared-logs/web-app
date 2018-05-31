@@ -33,8 +33,8 @@ export default class User extends SharedLogsAPI {
         super.all("users", this, callback)
     }
 
-    static get(id, callback) {
-        super.get("users", id, this, callback)
+    static get(id, params, callback) {
+        super.get("users", id, params, this, callback)
     }
 
     static lookupByScreenName(screen_name, callback) {

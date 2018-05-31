@@ -15,8 +15,8 @@ export default class Log extends SharedLogsAPI{
         super.all("logs", this, callback)
     }
 
-    static get(id, callback) {
-        super.get("logs", id, this, callback)
+    static get(id, params, callback) {
+        super.get("logs", id, params, this, callback)
     }
 
     static create(params, callback) {

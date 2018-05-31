@@ -29,8 +29,17 @@ export default class SharedLogsAPI {
             })
     }
 
-    static get(table, id, type, callback) {
-        fetch(`${process.env.REACT_APP_API_URL}/${table}/${id}`)
+    static objToQueryString(obj) {
+        const keyValuePairs = [];
+        for (const key in obj) {
+            keyValuePairs.push(encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]));
+        }
+        return keyValuePairs.join('&');
+    }
+
+    static get(table, id, params, type, callback) {
+        const query = this.objToQueryString(params)
+        fetch(`${process.env.REACT_APP_API_URL}/${table}/${id}?${query}`)
             .then(response => response.json())
             .then(record => {
                 if (callback && typeof callback === "function") callback(new type(record))

@@ -9,7 +9,7 @@ export default class DeviceViewer extends React.Component {
     }
 
     componentDidMount() {
-        Device.get(this.props.match.params.device_id, device => {
+        Device.get(this.props.match.params.device_id, null, device => {
             this.setState({ device: device })
         })
     }

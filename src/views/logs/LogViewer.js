@@ -11,7 +11,7 @@ export default class LogViewer extends React.Component {
     }
 
     componentDidMount() {
-        Log.get(this.props.match.params.log_id, log => {
+        Log.get(this.props.match.params.log_id, null, log => {
             this.setState({ log: log })
         })
     }

@@ -34,8 +34,8 @@ export default class Device extends SharedLogsAPI {
         super.all("devices", this, callback)
     }
 
-    static get(id, callback) {
-        super.get("devices", id, this, callback)
+    static get(id, params, callback) {
+        super.get("devices", id, params, this, callback)
     }
 
     static create(params, callback) {
