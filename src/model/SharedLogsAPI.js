@@ -1,3 +1,5 @@
+import * as querystring from "querystring";
+
 export default class SharedLogsAPI {
     constructor(record) {
         for (const prop in record) {
@@ -17,8 +19,9 @@ export default class SharedLogsAPI {
         return "modified"
     }
 
-    static all(table, type, callback) {
-        fetch(`${process.env.REACT_APP_API_URL}/${table}`)
+    static all(table, params, type, callback) {
+        const query = querystring.stringify(params)
+        fetch(`${process.env.REACT_APP_API_URL}/${table}?${query}`)
             .then(response => response.json())
             .then(list => {
                 list.map((e, i, n) => {
@@ -29,16 +32,8 @@ export default class SharedLogsAPI {
             })
     }
 
-    static objToQueryString(obj) {
-        const keyValuePairs = [];
-        for (const key in obj) {
-            keyValuePairs.push(encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]));
-        }
-        return keyValuePairs.join('&');
-    }
-
     static get(table, id, params, type, callback) {
-        const query = this.objToQueryString(params)
+        const query = querystring.stringify(params)
         fetch(`${process.env.REACT_APP_API_URL}/${table}/${id}?${query}`)
             .then(response => response.json())
             .then(record => {

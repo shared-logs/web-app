@@ -19,7 +19,7 @@ export default class DeviceViewer extends React.Component {
         return device
             ? <div>
                 {device.name}
-                <LogBrowser {...this.props}/>
+                {(device.logs ? <LogBrowser logs={device.logs} {...this.props}/> : "" )}
             </div>
             : <p>Loading</p>
     }

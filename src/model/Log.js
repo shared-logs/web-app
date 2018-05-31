@@ -1,5 +1,6 @@
 import Device from "./Device";
 import SharedLogsAPI from "./SharedLogsAPI";
+import Entry from "./Entry";
 
 export default class Log extends SharedLogsAPI{
     static get NAME() {
@@ -9,10 +10,14 @@ export default class Log extends SharedLogsAPI{
     constructor(record) {
         super(record)
         if (this.device) this.device = new Device(this.device)
+        if (this.entries) this.entries.map((record, i, subobject) => {
+            subobject[i] = new Entry(record)
+            return true;
+        })
     }
 
-    static all(callback) {
-        super.all("logs", this, callback)
+    static all(params, callback) {
+        super.all("logs", params, this, callback)
     }
 
     static get(id, params, callback) {

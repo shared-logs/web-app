@@ -7,13 +7,19 @@ import {LinkContainer} from "react-router-bootstrap";
 export default class LogViewer extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {}
+        if (props.log) {
+            this.state = { log: props.log }
+        } else {
+            this.state = {}
+        }
     }
 
     componentDidMount() {
-        Log.get(this.props.match.params.log_id, null, log => {
-            this.setState({ log: log })
-        })
+        if (!this.state.log) {
+            Log.get(this.props.match.params.log_id, null, log => {
+                this.setState({ log: log })
+            })
+        }
     }
 
     render() {
@@ -24,7 +30,7 @@ export default class LogViewer extends React.Component {
                 <LinkContainer to={match.url + "/add"}>
                     <Button>Add</Button>
                 </LinkContainer>
-            <EntryBrowser {...this.props} />
+            {(log.entries ? <EntryBrowser entries={log.entries} {...this.props} /> : "" )}
         </div>
             : <p>Loading</p>
     }

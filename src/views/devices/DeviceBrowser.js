@@ -2,6 +2,7 @@ import React from "react"
 import {Table} from "react-bootstrap";
 import Device from "../../model/Device";
 import {Link} from "react-router-dom";
+import LogBrowser from "../logs/LogBrowser";
 
 export default class DeviceBrowser extends React.Component {
     constructor(props) {
@@ -10,7 +11,7 @@ export default class DeviceBrowser extends React.Component {
     }
 
     componentDidMount() {
-        Device.all((list) => {
+        Device.all({"include[]": ["logs", "recent", "user"]}, (list) => {
             this.setState({devices: list})
         })
     }
@@ -27,6 +28,7 @@ export default class DeviceBrowser extends React.Component {
                             <Link to={match.url + "/" + device.id}>
                                 {device.name}
                             </Link>
+                            {(device.logs ? <LogBrowser logs={device.logs} {...this.props}/> : "" )}
                         </td>
                     </tr>
                 ))}

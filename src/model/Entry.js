@@ -29,8 +29,8 @@ export default class Entry extends SharedLogsAPI{
         return `${this.created}: ${this.title}`
     }
 
-    static all(callback) {
-        super.all("entries", this, callback)
+    static all(params, callback) {
+        super.all("entries", params, this, callback)
     }
 
     static get(id, params, callback) {

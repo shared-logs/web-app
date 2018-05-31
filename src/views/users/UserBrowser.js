@@ -9,7 +9,7 @@ export default class UserBrowser extends React.Component {
     }
 
     componentDidMount() {
-        User.all(list => {
+        User.all(null, list => {
             this.setState({ users: list })
         })
     }

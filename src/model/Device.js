@@ -30,8 +30,8 @@ export default class Device extends SharedLogsAPI {
         this._name = value
     }
 
-    static all(callback) {
-        super.all("devices", this, callback)
+    static all(params, callback) {
+        super.all("devices", params, this, callback)
     }
 
     static get(id, params, callback) {

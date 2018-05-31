@@ -29,8 +29,8 @@ export default class User extends SharedLogsAPI {
         return (this.first_name || this.last_name ? `${this.first_name} ${this.last_name}` : this.screen_name)
     }
 
-    static all(callback) {
-        super.all("users", this, callback)
+    static all(params, callback) {
+        super.all("users", params, this, callback)
     }
 
     static get(id, params, callback) {
