@@ -2,7 +2,7 @@ import React from "react"
 import {Button, ControlLabel, Form, FormControl, FormGroup} from "react-bootstrap";
 import Entry from "../../model/Entry";
 
-export default class EntryEditor extends  React.Component {
+export default class Edit extends  React.Component {
     constructor(props) {
         super(props)
         this.state = this.resetEntry(true);
@@ -11,7 +11,7 @@ export default class EntryEditor extends  React.Component {
     }
 
     resetEntry(toBeReturned = false) {
-        var blankForm = {
+        const blankForm = {
             [Entry.TITLE]: "",
             [Entry.DETAIL]: ""
         }

@@ -3,7 +3,7 @@ import {Button, ControlLabel, Form, FormControl, FormGroup} from "react-bootstra
 import User from "../../model/User";
 import {Redirect} from "react-router-dom";
 
-export default class UserEditor extends React.Component {
+export default class Edit extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -20,7 +20,7 @@ export default class UserEditor extends React.Component {
     }
 
     handleChange(event) {
-        var { params } = this.state
+        let { params } = this.state
         params[event.target.id] = event.target.value
         this.setState({ params: params })
     }
