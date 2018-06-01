@@ -1,40 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="809f9061-7094-4c52-bb51-289ec9781dd1" name="Default" comment="MVC/Preview Entries&#10;&#10;Pulled classes apart into a cleaner MVC organization (although `controller/entries/Edit` and `controller/users/Edit` may not be worth pulling apart) and did a bunch of renaming of classes to more clearly indicate their purpose. A `Detail` class shows full details on an object, while a `Thumbnail` shows just a snapshot preview. In views, I've separated singular and plural views (and the plural views depend on the singular views). This makes the controller classes all verbs (`View`, `Browse`, `Edit`).&#10;&#10;It seems like `react-bootstrap` is bogging down horribly if anything needs to be animated.">
-      <change afterPath="$PROJECT_DIR$/src/controller/devices/Browse.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controller/devices/View.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/Loading.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/device/Detail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/device/Thumbnail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/devices/Thumbnail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/entries/Detail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/entries/Thumbnail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/entry/Detail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/entry/Thumbnail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/log/Detail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/log/Thumbnail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/log/ThumbnailList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/user/Detail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/user/Thumbnail.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/view/users/Thumbnail.js" afterDir="false" />
+    <list default="true" id="809f9061-7094-4c52-bb51-289ec9781dd1" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AuthRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/AuthRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Authentication.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Authentication.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Navigation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/devices/DeviceBrowser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/devices/DeviceViewer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/entries/EntryBrowser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/entries/EntryEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/entries/Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/entries/EntryViewer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/logs/LogBrowser.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/logs/LogViewer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/logs/View.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/users/UserBrowser.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/users/Browse.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/users/UserEditor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/users/Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/users/UserViewer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/users/View.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,32 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Edit.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/entries/Edit.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Edit.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/controller/users/Edit.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="28" column="30" lean-forward="true" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Authentication.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/Authentication.js">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="48">
-              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+              <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -114,7 +63,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/views/users/UserEditor.js" />
         <option value="$PROJECT_DIR$/src/views/Editor.js" />
         <option value="$PROJECT_DIR$/src/views/entries/EntryEditor.js" />
         <option value="$PROJECT_DIR$/src/views/Navigation.js" />
@@ -165,6 +113,7 @@
         <option value="$PROJECT_DIR$/src/view/entry/Edit.js" />
         <option value="$PROJECT_DIR$/src/controller/entries/Edit.js" />
         <option value="$PROJECT_DIR$/src/controller/users/Edit.js" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -253,17 +202,18 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="nodejs_interpreter_path" value="node" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="SearchEverywhereHistoryKey" value="{&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.karma.karma_node_package_dir" value="" />
+    <property name="js.buildTools.grunt.grunt-cli.package" value="" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
+    <property name="nodejs_interpreter_path" value="node" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
-    <property name="js.buildTools.gulp.gulp_package_dir" value="" />
-    <property name="js.buildTools.grunt.grunt-cli.package" value="" />
-    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/react-scripts" />
-    <property name="javascript.karma.karma_node_package_dir" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -332,24 +282,31 @@
       <workItem from="1517939297253" duration="188000" />
       <workItem from="1517939634869" duration="2235000" />
       <workItem from="1517968384550" duration="426000" />
-      <workItem from="1527813404309" duration="10463000" />
+      <workItem from="1527813404309" duration="11172000" />
     </task>
+    <task id="LOCAL-00001" summary="MVC/Preview Entries&#10;&#10;Pulled classes apart into a cleaner MVC organization (although `controller/entries/Edit` and `controller/users/Edit` may not be worth pulling apart) and did a bunch of renaming of classes to more clearly indicate their purpose. A `Detail` class shows full details on an object, while a `Thumbnail` shows just a snapshot preview. In views, I've separated singular and plural views (and the plural views depend on the singular views). This makes the controller classes all verbs (`View`, `Browse`, `Edit`).&#10;&#10;It seems like `react-bootstrap` is bogging down horribly if anything needs to be animated.">
+      <created>1527823949157</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1527823949158</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157895000" />
+    <option name="totallyTimeSpent" value="158604000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" weight="0.32909605" />
+      <window_info anchor="bottom" id="Messages" weight="0.32909605" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32909605" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30369356" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3036723" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.27966103" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.27966103" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15333775" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.5663842" />
@@ -449,13 +406,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/views/Editor.js" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -770,6 +720,13 @@
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="48">
+          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
         </state>
       </provider>
     </entry>

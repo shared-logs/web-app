@@ -1,7 +1,7 @@
 {
   "name": "@battis/shared-logs-app",
   "version": "0.1.0",
-  "description": "A web app to inteact with the Shared Logs API (@packagist: battis/shared-logs",
+  "description": "A web app to interact with the Shared Logs API (@packagist: battis/shared-logs",
   "author": "Seth Battis <seth@battis.net>",
   "repository": "github:battis/shared-logs-app",
   "bugs": {
@@ -13,15 +13,15 @@
   "dependencies": {
     "bootstrap": "3.3.7",
     "querystring": "0.2.0",
-    "react": "16.2.0",
-    "react-bootstrap": "0.31.5",
+    "react": "16.4.0",
+    "react-bootstrap": "0.32.1",
     "react-cookies": "0.1.0",
-    "react-dom": "16.2.0",
+    "react-dom": "16.4.0",
     "react-fontawesome": "1.6.1",
     "react-rich-markdown": "1.0.1",
     "react-router-bootstrap": "0.24.4",
     "react-router-dom": "4.2.2",
-    "react-scripts": "1.0.17"
+    "react-scripts": "~1.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
