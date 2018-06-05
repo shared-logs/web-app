@@ -8,7 +8,9 @@ export default class Detail extends React.Component {
         const {log} = this.props
         return <div className="log">
             <h1>{log.name} {log.device ? <small><Link to={`/devices/${log.device.id}`}>{log.device.name}</Link></small> : ""}</h1>
-            <Button href={`/devices/${log.device_id}/logs/${log.id}/add`}>Add an Entry</Button>
+            <Link to={`${this.props.match.url}/add`}>
+                <Button color="primary">Add an Entry</Button>
+            </Link>
             {log.entries ? <Entries entries={log.entries} {...this.props}/> : ""}
         </div>
     }

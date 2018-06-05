@@ -1,17 +1,33 @@
 import React from "react"
 import Entry from "../../model/Entry";
-import {Button, Form, FormFeedback, FormGroup, Input, Label} from "reactstrap";
+import EntryEdit from "../../view/entry/Edit"
 
 export default class Edit extends  React.Component {
     constructor(props) {
         super(props)
-        this.state = this.resetEntry(true);
+        this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
+        this.validateTitle = this.validateTitle.bind(this)
+        this.validateDetail = this.validateDetail.bind(this)
+        this.validateForm = this.validateForm.bind(this)
+        this.state = {
+            submitted: false,
+            entry: this.resetEntry(true),
+            handlers: {
+                [Entry.TITLE]: this.handleChange,
+                [Entry.DETAIL]: this.handleChange,
+                [EntryEdit.SUBMIT]: this.handleSubmit
+            },
+            validators: {
+                [Entry.TITLE]: this.validateTitle,
+                [Entry.DETAIL]: this.validateDetail,
+                [EntryEdit.VALIDATE]: this.validateForm
+            },
+        };
         this.feedback = {
             [Entry.TITLE]: "",
             [Entry.DETAIL]: ""
         }
-        this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     resetEntry(toBeReturned = false) {
@@ -24,33 +40,37 @@ export default class Edit extends  React.Component {
     }
 
     handleChange(event) {
-        this.setState({ [event.target.id]: event.target.value })
+        var {entry} = this.state
+        entry[event.target.id] = event.target.value
+        this.setState({ entry: entry })
     }
 
     handleSubmit(event) {
         event.preventDefault()
-        const { match, auth, history } = this.props
+        const { match, auth } = this.props
+        console.log("submitting!")
         Entry.create({
-            [Entry.TITLE]: this.state.title,
-            [Entry.DETAIL]: this.state.detail,
+            [Entry.TITLE]: this.state.entry.title,
+            [Entry.DETAIL]: this.state.entry.detail,
             [Entry.LOG_ID]: match.params.log_id,
             [Entry.USER_ID]: auth.user.id
         }, entry => {
+            console.log(entry)
             this.processSubmit(entry)
-            history.goBack();
+            this.props.history.goBack()
         })
     }
 
     processSubmit(entry) {
         if (entry) {
-            if (this.props.onSubmit) {
+            if (this.props.onSubmit && typeof this.props.onSubmit === "function") {
                 this.props.onSubmit(entry)
             }
         }
     }
 
     validateTitle() {
-        if (this.state[Entry.TITLE].length > 0) {
+        if (this.state.entry[Entry.TITLE].length > 0) {
             this.feedback[Entry.TITLE] = ""
             return {valid: true}
         } else {
@@ -60,7 +80,7 @@ export default class Edit extends  React.Component {
     }
 
     validateDetail() {
-        if (this.state[Entry.DETAIL].length > 0) {
+        if (this.state.entry[Entry.DETAIL].length > 0) {
             this.feedback[Entry.DETAIL] = ""
             return {valid: true}
         } else {
@@ -69,21 +89,13 @@ export default class Edit extends  React.Component {
         }
     }
 
+    validateForm() {
+        return this.validateTitle().valid && this.validateDetail().valid ?
+            {} :
+            {disabled: true}
+    }
+
     render() {
-        return <Form onSubmit={this.handleSubmit}>
-            <FormGroup>
-                <Label>{Entry.TITLE}</Label>
-                <Input type="text" id={Entry.TITLE} value={this.state[Entry.TITLE]} placeholder="Good, descriptive title" onChange={this.handleChange} {...this.validateTitle()}/>
-                <FormFeedback>{this.feedback[Entry.TITLE]}</FormFeedback>
-            </FormGroup>
-            <FormGroup>
-                <Label>{Entry.DETAIL}</Label>
-                <Input type="textarea" id={Entry.DETAIL} value={this.state[Entry.DETAIL]} placeholder="Detailed description of what happened" onChange={this.handleChange} {...this.validateDetail()}/>
-                <FormFeedback>{this.feedback[Entry.DETAIL]}</FormFeedback>
-            </FormGroup>
-            <FormGroup>
-                <Button type="submit">Save</Button>
-            </FormGroup>
-        </Form>
+        return <EntryEdit {...this.state} feedback={this.feedback} {...this.props}/>
     }
 }

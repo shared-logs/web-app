@@ -1,19 +1,34 @@
 import React from "react"
 import User from "../../model/User";
+import UserEdit from "../../view/user/Edit"
 import {Redirect} from "react-router-dom";
-import {Button, Form, FormFeedback, FormGroup, Input, Label} from "reactstrap";
 
 export default class Edit extends React.Component {
     constructor(props) {
         super(props)
+        this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
+        this.validateScreenName = this.validateScreenName.bind(this)
+        this.validateForm = this.validateForm.bind(this)
         this.state = {
             submitted: false,
-            params: props.user || {
+            user: props.user || {
                 [User.SCREEN_NAME]: "",
                 [User.FIRST_NAME]: "",
                 [User.LAST_NAME]: "",
                 [User.EMAIL]: ""
             },
+            handlers: {
+                [User.SCREEN_NAME]: this.handleChange,
+                [User.FIRST_NAME]: this.handleChange,
+                [User.LAST_NAME]: this.handleChange,
+                [User.EMAIL]: this.handleChange,
+                [UserEdit.SUBMIT]: this.handleSubmit
+            },
+            validators: {
+                [User.SCREEN_NAME]: this.validateScreenName,
+                [UserEdit.VALIDATE]: this.validateForm
+            }
         }
         this.feedback = {
             [User.SCREEN_NAME]: "",
@@ -21,19 +36,17 @@ export default class Edit extends React.Component {
             [User.LAST_NAME]: "",
             [User.EMAIL]: ""
         }
-        this.handleChange = this.handleChange.bind(this)
-        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     handleChange(event) {
-        let { params } = this.state
-        params[event.target.id] = event.target.value
-        this.setState({ params: params })
+        let { user } = this.state
+        user[event.target.id] = event.target.value
+        this.setState({ user: user })
     }
 
     handleSubmit(event) {
         event.preventDefault()
-        const { params } = this.state
+        const params = this.state.user
         const { onSubmit, user, history } = this.props
         const callback = user => {
             if (onSubmit && typeof onSubmit === "function") onSubmit(user)
@@ -48,39 +61,26 @@ export default class Edit extends React.Component {
     }
 
     validateScreenName() {
-        if (this.state.params[User.SCREEN_NAME].length > 0) {
+        if (this.state.user[User.SCREEN_NAME].length >= 3) {
            this.feedback[User.SCREEN_NAME] = ""
             return {valid: true}
         } else {
-            this.feedback[User.SCREEN_NAME] = "A screen name is required!"
+            this.feedback[User.SCREEN_NAME] = "A screen name is required! (minimum 3 characters)"
             return {invalid: true}
         }
     }
 
+    validateForm() {
+        return this.validateScreenName().valid ?
+            {} :
+            {disabled: true}
+    }
+
     render() {
-        const { submitted, params } = this.state
+        const { submitted } = this.state
         const { from } = this.props.location.state || { from: { pathname: '/' }}
         return submitted
             ? <Redirect to={from}/>
-            : <Form onSubmit={this.handleSubmit}>
-            <FormGroup>
-                <Label>{User.SCREEN_NAME}</Label>
-                <Input type="text" id={User.SCREEN_NAME} value={params[User.SCREEN_NAME]} onChange={this.handleChange} {...this.validateScreenName()}/>
-                <FormFeedback>{this.feedback[User.SCREEN_NAME]}</FormFeedback>
-            </FormGroup>
-            <FormGroup>
-                <Label>{User.FIRST_NAME}</Label>
-                <Input type="text" id={User.FIRST_NAME} value={params[User.FIRST_NAME]} onChange={this.handleChange}/>
-            </FormGroup>
-            <FormGroup>
-                <Label>{User.LAST_NAME}</Label>
-                <Input type="text" id={User.LAST_NAME} value={params[User.LAST_NAME]} onChange={this.handleChange}/>
-            </FormGroup>
-            <FormGroup>
-                <Label>{User.EMAIL}</Label>
-                <Input type="text" id={User.EMAIL} value={params[User.EMAIL]} onChange={this.handleChange}/>
-            </FormGroup>
-            <Button color="primary" type="submit">Save</Button>
-        </Form>
+            : <UserEdit {...this.state} feedback={this.feedback} {...this.props}/>
     }
 }

@@ -2,29 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="809f9061-7094-4c52-bb51-289ec9781dd1" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/view/entry/Edit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/view/user/Edit.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/Navigation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/entries/Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/entries/Edit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controller/logs/View.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/logs/View.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/controller/users/Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/users/Edit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/Loading.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/Loading.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/device/Detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/device/Detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/device/Thumbnail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/device/Thumbnail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/devices/Thumbnail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/devices/Thumbnail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/entries/Detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/entries/Detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/entries/Thumbnail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/entries/Thumbnail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/entry/Detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/entry/Detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/entry/Thumbnail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/entry/Thumbnail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/log/Detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/log/Detail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/view/log/Thumbnail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/log/Thumbnail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/log/ThumbnailList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/logs/Thumbnail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/user/Detail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/user/Detail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/user/Thumbnail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/user/Thumbnail.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/users/Thumbnail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/users/Thumbnail.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,8 +26,8 @@
       <file leaf-file-name="Edit.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/entries/Edit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="261">
-              <caret line="80" column="198" selection-start-line="80" selection-start-column="198" selection-end-line="80" selection-end-column="198" />
+            <state relative-caret-position="5">
+              <caret line="64" column="20" lean-forward="true" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -50,11 +35,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Detail.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Edit.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/users/Edit.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="101">
+              <caret line="67" column="96" selection-start-line="67" selection-start-column="96" selection-end-line="67" selection-end-column="96" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/User.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="512">
+              <caret line="32" selection-start-line="32" selection-end-line="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Edit.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/user/Edit.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="496">
+              <caret line="31" column="105" selection-start-line="31" selection-start-column="105" selection-end-line="31" selection-end-column="105" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Entry.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Entry.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="293">
+              <caret line="56" column="44" lean-forward="true" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Detail.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/log/Detail.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="192">
+              <caret line="12" column="19" selection-start-line="10" selection-start-column="11" selection-end-line="12" selection-end-column="19" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -62,11 +89,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Loading.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/Loading.js">
+      <file leaf-file-name="Edit.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/entry/Edit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="64">
-              <caret line="4" column="86" selection-start-line="4" selection-start-column="86" selection-end-line="4" selection-end-column="86" />
+            <state relative-caret-position="160">
+              <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Thumbnail.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/log/Thumbnail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="11" column="93" selection-start-line="11" selection-start-column="93" selection-end-line="11" selection-end-column="93" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Thumbnail.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/entries/Thumbnail.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="96">
+              <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="View.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controller/logs/View.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="277">
+              <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -80,8 +143,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="tsconfig.json" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -113,7 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/views/users/UserBrowser.js" />
         <option value="$PROJECT_DIR$/src/views/logs/LogBrowser.js" />
         <option value="$PROJECT_DIR$/src/views/devices/DeviceBrowser.js" />
         <option value="$PROJECT_DIR$/src/model/Log.js" />
@@ -133,10 +195,8 @@
         <option value="$PROJECT_DIR$/src/controller/Authentication.js" />
         <option value="$PROJECT_DIR$/src/view/devices/ThumbnailList.js" />
         <option value="$PROJECT_DIR$/src/controller/devices/View.js" />
-        <option value="$PROJECT_DIR$/src/controller/logs/View.js" />
         <option value="$PROJECT_DIR$/src/controller/users/Browse.js" />
         <option value="$PROJECT_DIR$/src/controller/users/View.js" />
-        <option value="$PROJECT_DIR$/src/view/entry/Edit.js" />
         <option value="$PROJECT_DIR$/src/controller/devices/Browse.js" />
         <option value="$PROJECT_DIR$/src/view/entries/Detail.js" />
         <option value="$PROJECT_DIR$/src/view/entry/Detail.js" />
@@ -150,7 +210,6 @@
         <option value="$PROJECT_DIR$/public/shared-logs.css" />
         <option value="$PROJECT_DIR$/src/view/devices/Thumbnail.js" />
         <option value="$PROJECT_DIR$/src/view/logs/Thumbnail.js" />
-        <option value="$PROJECT_DIR$/src/view/log/Thumbnail.js" />
         <option value="$PROJECT_DIR$/src/view/entries/Thumbnail.js" />
         <option value="$PROJECT_DIR$/public/css/shared-logs.css" />
         <option value="$PROJECT_DIR$/src/view/device/Detail.js" />
@@ -159,11 +218,15 @@
         <option value="$PROJECT_DIR$/src/controller/Navigation.js" />
         <option value="$PROJECT_DIR$/src/controller/App.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/controller/users/Edit.js" />
         <option value="$PROJECT_DIR$/src/controller/Login.js" />
-        <option value="$PROJECT_DIR$/src/controller/entries/Edit.js" />
         <option value="$PROJECT_DIR$/src/view/Loading.js" />
+        <option value="$PROJECT_DIR$/src/controller/entries/Edit.js" />
+        <option value="$PROJECT_DIR$/src/view/entry/Edit.js" />
+        <option value="$PROJECT_DIR$/src/view/user/Edit.js" />
         <option value="$PROJECT_DIR$/src/view/log/Detail.js" />
+        <option value="$PROJECT_DIR$/src/controller/users/Edit.js" />
+        <option value="$PROJECT_DIR$/src/view/log/Thumbnail.js" />
+        <option value="$PROJECT_DIR$/src/controller/logs/View.js" />
       </list>
     </option>
   </component>
@@ -232,7 +295,41 @@
               <item name="web-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="web-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="users" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="entries" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="entry" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="web-app" type="b2602c69:ProjectViewProjectNode" />
@@ -246,7 +343,7 @@
               <item name="web-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
-              <item name="logs" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -339,7 +436,7 @@
       <workItem from="1517968384550" duration="426000" />
       <workItem from="1527813404309" duration="11172000" />
       <workItem from="1528126310374" duration="4158000" />
-      <workItem from="1528137703172" duration="8951000" />
+      <workItem from="1528137703172" duration="18804000" />
     </task>
     <task id="LOCAL-00001" summary="MVC/Preview Entries&#10;&#10;Pulled classes apart into a cleaner MVC organization (although `controller/entries/Edit` and `controller/users/Edit` may not be worth pulling apart) and did a bunch of renaming of classes to more clearly indicate their purpose. A `Detail` class shows full details on an object, while a `Thumbnail` shows just a snapshot preview. In views, I've separated singular and plural views (and the plural views depend on the singular views). This makes the controller classes all verbs (`View`, `Browse`, `Edit`).&#10;&#10;It seems like `react-bootstrap` is bogging down horribly if anything needs to be animated.">
       <created>1527823949157</created>
@@ -348,11 +445,18 @@
       <option name="project" value="LOCAL" />
       <updated>1527823949158</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Converted to ReactStrap&#10;&#10;...and basically have the structure working right. Just need to make it pretty now.">
+      <created>1528207697330</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1528207697330</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171713000" />
+    <option name="totallyTimeSpent" value="181566000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="876" extended-state="6" />
@@ -416,7 +520,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="MVC/Preview Entries&#10;&#10;Pulled classes apart into a cleaner MVC organization (although `controller/entries/Edit` and `controller/users/Edit` may not be worth pulling apart) and did a bunch of renaming of classes to more clearly indicate their purpose. A `Detail` class shows full details on an object, while a `Thumbnail` shows just a snapshot preview. In views, I've separated singular and plural views (and the plural views depend on the singular views). This makes the controller classes all verbs (`View`, `Browse`, `Edit`).&#10;&#10;It seems like `react-bootstrap` is bogging down horribly if anything needs to be animated." />
-    <option name="LAST_COMMIT_MESSAGE" value="MVC/Preview Entries&#10;&#10;Pulled classes apart into a cleaner MVC organization (although `controller/entries/Edit` and `controller/users/Edit` may not be worth pulling apart) and did a bunch of renaming of classes to more clearly indicate their purpose. A `Detail` class shows full details on an object, while a `Thumbnail` shows just a snapshot preview. In views, I've separated singular and plural views (and the plural views depend on the singular views). This makes the controller classes all verbs (`View`, `Browse`, `Edit`).&#10;&#10;It seems like `react-bootstrap` is bogging down horribly if anything needs to be animated." />
+    <MESSAGE value="Converted to ReactStrap&#10;&#10;...and basically have the structure working right. Just need to make it pretty now." />
+    <option name="LAST_COMMIT_MESSAGE" value="Converted to ReactStrap&#10;&#10;...and basically have the structure working right. Just need to make it pretty now." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -424,7 +529,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/react-bootstrap/es/Navbar.js" />
     <entry file="file://$PROJECT_DIR$/src/Logout.js" />
     <entry file="file://$PROJECT_DIR$/src/CurrentUser.js" />
     <entry file="file://$PROJECT_DIR$/src/AuthState.js" />
@@ -463,13 +567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Entry.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/entries/EntryBrowser.js" />
     <entry file="file://$PROJECT_DIR$/src/model/Log.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -504,24 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/logs/View.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/users/View.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/entry/Edit.js" />
     <entry file="file://$PROJECT_DIR$/src/controller/devices/Browse.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -539,13 +618,6 @@
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="32" selection-start-line="32" selection-end-line="33" />
         </state>
       </provider>
     </entry>
@@ -604,6 +676,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="224">
           <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -611,26 +686,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/entries/Thumbnail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/log/Thumbnail.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -703,16 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/users/Edit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="68" column="29" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/Login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
@@ -743,10 +788,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/users/View.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Entry.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="56" column="44" lean-forward="true" selection-start-line="56" selection-start-column="44" selection-end-line="56" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/user/Edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="31" column="105" selection-start-line="31" selection-start-column="105" selection-end-line="31" selection-end-column="105" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/entry/Edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/User.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="32" selection-start-line="32" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/entries/Edit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="80" column="198" selection-start-line="80" selection-start-column="198" selection-end-line="80" selection-end-column="198" />
+        <state relative-caret-position="5">
+          <caret line="64" column="20" lean-forward="true" selection-start-line="64" selection-start-column="20" selection-end-line="64" selection-end-column="20" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
@@ -755,8 +841,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/log/Detail.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        <state relative-caret-position="192">
+          <caret line="12" column="19" selection-start-line="10" selection-start-column="11" selection-end-line="12" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/users/Edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="67" column="96" selection-start-line="67" selection-start-column="96" selection-end-line="67" selection-end-column="96" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/log/Thumbnail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="93" selection-start-line="11" selection-start-column="93" selection-end-line="11" selection-end-column="93" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/entries/Thumbnail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="37" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/logs/View.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="277">
+          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>
