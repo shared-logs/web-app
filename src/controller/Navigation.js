@@ -50,7 +50,7 @@ class Navigation extends React.Component {
                         <NavLink tag={Link} to="/devices">Devices</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink tag={Link} to="/devices">Users</NavLink>
+                        <NavLink tag={Link} to="/users">Users</NavLink>
                     </NavItem>
                 </Nav>
             </Collapse>
