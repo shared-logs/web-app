@@ -1,7 +1,7 @@
 import React from "react"
-import User from "../../model/User";
-import Thumbnail from "../../view/users/Thumbnail";
-import Loading from "../../view/Loading";
+import User from "../../../model/User";
+import Thumbnail from "../../../view/users/Thumbnail";
+import Loading from "../../../view/Loading";
 
 export default class Browse extends React.Component {
     constructor(props) {

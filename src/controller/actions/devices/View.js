@@ -1,7 +1,7 @@
 import React from "react"
-import Device from "../../model/Device";
-import Detail from "../../view/device/Detail";
-import Loading from "../../view/Loading";
+import Device from "../../../model/Device";
+import Detail from "../../../view/device/Detail";
+import Loading from "../../../view/Loading";
 
 export default class View extends React.Component {
     constructor(props) {

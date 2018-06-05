@@ -1,6 +1,6 @@
 import React from "react"
-import User from "../../model/User";
-import UserEdit from "../../view/user/Edit"
+import User from "../../../model/User";
+import UserEdit from "../../../view/user/Edit"
 import {Redirect} from "react-router-dom";
 
 export default class Edit extends React.Component {

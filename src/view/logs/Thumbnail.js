@@ -4,12 +4,10 @@ import LogThumbnail from "../log/Thumbnail"
 export default class Thumbnail extends React.Component {
     render() {
         const {logs} = this.props
-        return <ul className="logs thumbnail">
+        return <div>
             {logs.map(log => (
-                <li key={log.id}>
-                    <LogThumbnail log={log} {...this.props}/>
-                </li>
+                <LogThumbnail key={log.id} log={log} {...this.props}/>
             ))}
-        </ul>
+        </div>
     }
 }

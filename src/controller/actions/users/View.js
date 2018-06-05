@@ -1,5 +1,5 @@
 import React from "react"
-import Detail from "../../view/user/Detail";
+import Detail from "../../../view/user/Detail";
 
 export default class View extends React.Component {
     render() {

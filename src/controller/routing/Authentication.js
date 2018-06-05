@@ -1,5 +1,5 @@
 import * as cookie from "react-cookies";
-import User from "../model/User";
+import User from "../../model/User";
 
 export default class Authentication {
     user = null

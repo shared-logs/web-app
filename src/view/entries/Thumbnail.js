@@ -4,12 +4,10 @@ import EntryThumbnail from "../entry/Thumbnail";
 export default class Thumbnail extends React.Component {
     render() {
         const {entries} = this.props
-        return <ul className="entries thumbnail">
+        return <div>
             {entries.map(entry => (
-                <li key={entry.id}>
-                    <EntryThumbnail entry={entry} {...this.props}/>
-                </li>
+                <EntryThumbnail key={entry.id} entry={entry} {...this.props}/>
             ))}
-        </ul>
+        </div>
     }
 }

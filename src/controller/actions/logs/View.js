@@ -1,7 +1,7 @@
 import React from "react"
-import Log from "../../model/Log";
-import Detail from "../../view/log/Detail";
-import Loading from "../../view/Loading";
+import Log from "../../../model/Log";
+import Detail from "../../../view/log/Detail";
+import Loading from "../../../view/Loading";
 
 export default class View extends React.Component {
     constructor(props) {

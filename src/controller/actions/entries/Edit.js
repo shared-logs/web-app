@@ -1,6 +1,6 @@
 import React from "react"
-import Entry from "../../model/Entry";
-import EntryEdit from "../../view/entry/Edit"
+import Entry from "../../../model/Entry";
+import EntryEdit from "../../../view/entry/Edit"
 
 export default class Edit extends  React.Component {
     constructor(props) {
