@@ -1,7 +1,7 @@
 import React from "react"
 import {Link, Redirect} from "react-router-dom";
 import User from "../model/User";
-import {Button, ControlLabel, Form, FormControl, FormGroup} from "react-bootstrap";
+import {Button, Form, FormGroup, Input, Label} from "reactstrap";
 
 export default class Login extends React.Component {
     constructor(props) {
@@ -30,12 +30,12 @@ export default class Login extends React.Component {
 
         return <div>
             <Form onSubmit={this.handleSubmit}>
-                <FormGroup controlId={User.SCREEN_NAME}>
-                    <ControlLabel>{User.SCREEN_NAME}</ControlLabel>
-                    <FormControl type="text" value={this.state[User.SCREEN_NAME]} onChange={this.handleChange}/>
+                <FormGroup>
+                    <Label>{User.SCREEN_NAME}</Label>
+                    <Input type="text" id={User.SCREEN_NAME} value={this.state[User.SCREEN_NAME]} onChange={this.handleChange}/>
                 </FormGroup>
                 <FormGroup>
-                    <Button type="submit">Sign in</Button>
+                    <Button color="primary" type="submit">Sign in</Button>
                 </FormGroup>
             </Form>
             <div className="container">

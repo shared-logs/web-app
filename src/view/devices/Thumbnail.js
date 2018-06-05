@@ -1,16 +1,15 @@
 import React from "react"
 import DeviceThumbnail from "../device/Thumbnail";
-import {ListGroup, ListGroupItem} from "react-bootstrap";
 
 export default class Thumbnail extends React.Component {
     render() {
         const {devices} = this.props
-        return <ListGroup>
+        return <ul className="devices thumbnail">
             {devices.map(device => (
-                <ListGroupItem key={device.id}>
+                <li key={device.id}>
                     <DeviceThumbnail device={device} {...this.props}/>
-                </ListGroupItem>
+                </li>
             ))}
-        </ListGroup>
+        </ul>
     }
 }

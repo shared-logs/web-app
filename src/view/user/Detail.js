@@ -3,7 +3,7 @@ import React from "react"
 export default class Detail extends React.Component {
     render() {
         const {user} = this.props
-        return <div>
+        return <div className="user">
             <h1>{user.name}</h1>
             <dl>
                 <dd>{user.first_name} {user.last_name}</dd>

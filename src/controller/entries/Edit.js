@@ -1,11 +1,15 @@
 import React from "react"
-import {Button, ControlLabel, Form, FormControl, FormGroup} from "react-bootstrap";
 import Entry from "../../model/Entry";
+import {Button, Form, FormFeedback, FormGroup, Input, Label} from "reactstrap";
 
 export default class Edit extends  React.Component {
     constructor(props) {
         super(props)
         this.state = this.resetEntry(true);
+        this.feedback = {
+            [Entry.TITLE]: "",
+            [Entry.DETAIL]: ""
+        }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
     }
@@ -46,20 +50,36 @@ export default class Edit extends  React.Component {
     }
 
     validateTitle() {
-        if (this.state[Entry.TITLE].length > 0) return "success"
-        else return "error"
+        if (this.state[Entry.TITLE].length > 0) {
+            this.feedback[Entry.TITLE] = ""
+            return {valid: true}
+        } else {
+            this.feedback[Entry.TITLE] = "A good, clear title is required!"
+            return {invalid: true}
+        }
+    }
+
+    validateDetail() {
+        if (this.state[Entry.DETAIL].length > 0) {
+            this.feedback[Entry.DETAIL] = ""
+            return {valid: true}
+        } else {
+            this.feedback[Entry.DETAIL] = "A clear, detailed description is required!"
+            return {invalid: true}
+        }
     }
 
     render() {
         return <Form onSubmit={this.handleSubmit}>
-            <FormGroup controlId={Entry.TITLE} validationState={this.validateTitle()}>
-                <ControlLabel>{Entry.TITLE}</ControlLabel>
-                <FormControl type="text" value={this.state[Entry.TITLE]} placeholder="Good, descriptive title" onChange={this.handleChange}/>
-                <FormControl.Feedback/>
+            <FormGroup>
+                <Label>{Entry.TITLE}</Label>
+                <Input type="text" id={Entry.TITLE} value={this.state[Entry.TITLE]} placeholder="Good, descriptive title" onChange={this.handleChange} {...this.validateTitle()}/>
+                <FormFeedback>{this.feedback[Entry.TITLE]}</FormFeedback>
             </FormGroup>
-            <FormGroup controlId={Entry.DETAIL}>
-                <ControlLabel>{Entry.DETAIL}</ControlLabel>
-                <FormControl componentClass="textarea" value={this.state[Entry.DETAIL]} placeholder="Detailed description of what happened" onChange={this.handleChange}/>
+            <FormGroup>
+                <Label>{Entry.DETAIL}</Label>
+                <Input type="textarea" id={Entry.DETAIL} value={this.state[Entry.DETAIL]} placeholder="Detailed description of what happened" onChange={this.handleChange} {...this.validateDetail()}/>
+                <FormFeedback>{this.feedback[Entry.DETAIL]}</FormFeedback>
             </FormGroup>
             <FormGroup>
                 <Button type="submit">Save</Button>

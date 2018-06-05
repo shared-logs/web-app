@@ -1,41 +1,61 @@
 import React from "react";
-import {MenuItem, Nav, Navbar, NavDropdown, NavItem} from "react-bootstrap";
-import {LinkContainer} from "react-router-bootstrap";
 import {withRouter} from "react-router-dom";
+import {
+    Collapse, DropdownItem,
+    DropdownMenu,
+    DropdownToggle,
+    Nav,
+    Navbar,
+    NavbarBrand,
+    NavbarToggler, NavItem, NavLink,
+    UncontrolledDropdown
+} from "reactstrap";
 
 class Navigation extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.toggle = this.toggle.bind(this);
+        this.state = {
+            isOpen: false
+        };
+    }
+    toggle() {
+        this.setState({
+            isOpen: !this.state.isOpen
+        });
+    }
     render() {
         const { onSignOut, auth } = this.props
-        return <Navbar collapseOnSelect>
-            <Navbar.Header>
-                <Navbar.Brand>
-                    Shared Logs
-                </Navbar.Brand>
-                <Navbar.Toggle/>
-            </Navbar.Header>
-            <Navbar.Collapse>
-                <Nav pullRight>
+        return <Navbar color="light" light expand="md">
+            <NavbarBrand href="#">Shared Logs</NavbarBrand>
+            <NavbarToggler onClick={this.toggle}/>
+            <Collapse isOpen={this.state.isOpen} navbar>
+                <Nav className="ml-auto" navbar>
                     {auth.isAuthenticated
-                        ? <NavDropdown title={auth.user.name} id="auth-menu">
-                            <LinkContainer to="/profile">
-                                <MenuItem>Profile</MenuItem>
-                            </LinkContainer>
-                            <MenuItem onClick={onSignOut}>Sign Out</MenuItem>
-                        </NavDropdown>
-                        : <LinkContainer to="/login">
-                            <NavItem>Sign In</NavItem>
-                        </LinkContainer>
+                        ? <UncontrolledDropdown nav inNavbar>
+                            <DropdownToggle nav caret>
+                                {auth.user.name}
+                            </DropdownToggle>
+                            <DropdownMenu right>
+                                <DropdownItem href="/profile">Profile</DropdownItem>
+                                <DropdownItem href="#" onClick={onSignOut}>Sign Out</DropdownItem>
+                            </DropdownMenu>
+                        </UncontrolledDropdown>
+                        : <NavItem>
+                            <NavLink href="/login">Sign In</NavLink>
+                        </NavItem>
                     }
-                    <LinkContainer to="/devices">
-                        <NavItem>Devices</NavItem>
-                    </LinkContainer>
-                    <LinkContainer to="/users">
-                        <NavItem>Users</NavItem>
-                    </LinkContainer>
+                    <NavItem>
+                        <NavLink href="/devices">Devices</NavLink>
+                    </NavItem>
+                    <NavItem>
+                        <NavLink href="/users">Users</NavLink>
+                    </NavItem>
                 </Nav>
-            </Navbar.Collapse>
+            </Collapse>
         </Navbar>
-    }
+}
 }
 
 export default withRouter(Navigation)

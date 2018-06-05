@@ -1,15 +1,15 @@
 import React from "react"
-import {ListGroup, ListGroupItem} from "react-bootstrap";
+import UserThumbnail from "../user/Thumbnail"
 
 export default class Thumbnail extends React.Component {
     render() {
         const {users} = this.props
-        return <ListGroup>
+        return <ul className="users thumbnail">
             {users.map(user => (
-                <ListGroupItem key={user.id}>
-                    <Thumbnail user={user} {...this.props}/>
-                </ListGroupItem>
+                <li key={user.id}>
+                    <UserThumbnail user={user} {...this.props}/>
+                </li>
             ))}
-        </ListGroup>
+        </ul>
     }
 }

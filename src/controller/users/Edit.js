@@ -1,7 +1,7 @@
 import React from "react"
-import {Button, ControlLabel, Form, FormControl, FormGroup} from "react-bootstrap";
 import User from "../../model/User";
 import {Redirect} from "react-router-dom";
+import {Button, Form, FormFeedback, FormGroup, Input, Label} from "reactstrap";
 
 export default class Edit extends React.Component {
     constructor(props) {
@@ -13,7 +13,13 @@ export default class Edit extends React.Component {
                 [User.FIRST_NAME]: "",
                 [User.LAST_NAME]: "",
                 [User.EMAIL]: ""
-            }
+            },
+        }
+        this.feedback = {
+            [User.SCREEN_NAME]: "",
+            [User.FIRST_NAME]: "",
+            [User.LAST_NAME]: "",
+            [User.EMAIL]: ""
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -42,9 +48,13 @@ export default class Edit extends React.Component {
     }
 
     validateScreenName() {
-        return this.state.params[User.SCREEN_NAME].length > 0
-            ? "success"
-            : "error"
+        if (this.state.params[User.SCREEN_NAME].length > 0) {
+           this.feedback[User.SCREEN_NAME] = ""
+            return {valid: true}
+        } else {
+            this.feedback[User.SCREEN_NAME] = "A screen name is required!"
+            return {invalid: true}
+        }
     }
 
     render() {
@@ -53,24 +63,24 @@ export default class Edit extends React.Component {
         return submitted
             ? <Redirect to={from}/>
             : <Form onSubmit={this.handleSubmit}>
-            <FormGroup controlId={User.SCREEN_NAME} validationState={this.validateScreenName()}>
-                <ControlLabel>{User.SCREEN_NAME}</ControlLabel>
-                <FormControl type="text" value={params[User.SCREEN_NAME]} onChange={this.handleChange}/>
-                <FormControl.Feedback/>
+            <FormGroup>
+                <Label>{User.SCREEN_NAME}</Label>
+                <Input type="text" id={User.SCREEN_NAME} value={params[User.SCREEN_NAME]} onChange={this.handleChange} {...this.validateScreenName()}/>
+                <FormFeedback>{this.feedback[User.SCREEN_NAME]}</FormFeedback>
             </FormGroup>
-            <FormGroup controlId={User.FIRST_NAME}>
-                <ControlLabel>{User.FIRST_NAME}</ControlLabel>
-                <FormControl type="text" value={params[User.FIRST_NAME]} onChange={this.handleChange}/>
+            <FormGroup>
+                <Label>{User.FIRST_NAME}</Label>
+                <Input type="text" id={User.FIRST_NAME} value={params[User.FIRST_NAME]} onChange={this.handleChange}/>
             </FormGroup>
-            <FormGroup controlId={User.LAST_NAME}>
-                <ControlLabel>{User.LAST_NAME}</ControlLabel>
-                <FormControl type="text" value={params[User.LAST_NAME]} onChange={this.handleChange}/>
+            <FormGroup>
+                <Label>{User.LAST_NAME}</Label>
+                <Input type="text" id={User.LAST_NAME} value={params[User.LAST_NAME]} onChange={this.handleChange}/>
             </FormGroup>
-            <FormGroup controlId={User.EMAIL}>
-                <ControlLabel>{User.EMAIL}</ControlLabel>
-                <FormControl type="text" value={params[User.EMAIL]} onChange={this.handleChange}/>
+            <FormGroup>
+                <Label>{User.EMAIL}</Label>
+                <Input type="text" id={User.EMAIL} value={params[User.EMAIL]} onChange={this.handleChange}/>
             </FormGroup>
-            <Button type="submit">Save</Button>
+            <Button color="primary" type="submit">Save</Button>
         </Form>
     }
 }
