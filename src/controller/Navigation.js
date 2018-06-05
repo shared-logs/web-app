@@ -1,5 +1,5 @@
 import React from "react";
-import {withRouter} from "react-router-dom";
+import {Link, withRouter} from "react-router-dom";
 import {
     Collapse, DropdownItem,
     DropdownMenu,
@@ -28,7 +28,7 @@ class Navigation extends React.Component {
     render() {
         const { onSignOut, auth } = this.props
         return <Navbar color="light" light expand="md">
-            <NavbarBrand href="#">Shared Logs</NavbarBrand>
+            <NavbarBrand>Shared Logs</NavbarBrand>
             <NavbarToggler onClick={this.toggle}/>
             <Collapse isOpen={this.state.isOpen} navbar>
                 <Nav className="ml-auto" navbar>
@@ -38,19 +38,19 @@ class Navigation extends React.Component {
                                 {auth.user.name}
                             </DropdownToggle>
                             <DropdownMenu right>
-                                <DropdownItem href="/profile">Profile</DropdownItem>
-                                <DropdownItem href="#" onClick={onSignOut}>Sign Out</DropdownItem>
+                                <DropdownItem tag={Link} to="/profile">Profile</DropdownItem>
+                                <DropdownItem onClick={onSignOut}>Sign Out</DropdownItem>
                             </DropdownMenu>
                         </UncontrolledDropdown>
                         : <NavItem>
-                            <NavLink href="/login">Sign In</NavLink>
+                            <NavLink tag={Link} to="/login">Sign In</NavLink>
                         </NavItem>
                     }
                     <NavItem>
-                        <NavLink href="/devices">Devices</NavLink>
+                        <NavLink tag={Link} to="/devices">Devices</NavLink>
                     </NavItem>
                     <NavItem>
-                        <NavLink href="/users">Users</NavLink>
+                        <NavLink tag={Link} to="/devices">Users</NavLink>
                     </NavItem>
                 </Nav>
             </Collapse>

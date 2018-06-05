@@ -15,7 +15,7 @@ export default class View extends React.Component {
 
     componentDidMount() {
         if (!this.state.log) {
-            Log.get(this.props.match.params.log_id, {"include[]": ["device", "entries", "user"], "entries[count]": "3"}, log => {
+            Log.get(this.props.match.params.log_id, {"include[]": ["device", "entries", "user"]}, log => {
                 this.setState({ log: log })
             })
         }
