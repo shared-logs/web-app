@@ -1,32 +1,32 @@
 import React from "react"
 import {Link} from "react-router-dom";
-import {Card, CardBody, CardHeader, CardText, Col} from "reactstrap";
-import FontAwesome from "react-fontawesome"
+import {Card, CardBody, CardHeader, CardText, CardTitle, Col, Container} from "reactstrap";
+import {humanDate} from "../utils";
+import ButtonAdd from "../entry/ButtonAdd";
 
 export default class Thumbnail extends React.Component {
     render() {
         const {device} = this.props
         return <Col sm="4">
+            <Container>
             <Card>
-                <CardHeader>
-                    <Link to={`/devices/${device.id}`}>{device.name}</Link>
-                </CardHeader>
-                <CardBody>
-                    <CardText>{device.logs ? device.logs.map(log => (
-                        <div key={`log-${log.id}`}>
-                            <Link to={`/devices/${device.id}/logs/${log.id}`}>{log.name}</Link>
-                            <div>
+                <CardHeader tag={Link} to={`/devices/${device.id}`}>{device.name}</CardHeader>
+                    {device.logs ? device.logs.map(log => (
+                        <CardBody key={`log-${log.id}`}>
+                            <CardTitle tag={Link} to={`/devices/${device.id}/logs/${log.id}`}>{log.name}</CardTitle>
+                            <ButtonAdd device={device} log={log} caption={false}/>
+                            <CardText>
                                 {log.entries ? log.entries.map(entry => (
-                                    <div key={`entry-${entry.id}`}>{entry.title} <small><br/>{entry.created}</small></div>
+                                    <span key={`entry-${entry.id}`}>{entry.title} <small><br/>{humanDate(entry.created)}</small></span>
                                 )) : ""}
-                                <Link className="float-right" to={`/devices/${device.id}/logs/${log.id}/add`} size="sm" color="secondary">
-                                    <FontAwesome name="plus-circle"/>
-                                </Link>
-                            </div>
-                        </div>
-                    )) : "No logs"}</CardText>
-                </CardBody>
+
+                            </CardText>
+                        </CardBody>
+                    )) : <CardBody>
+                        <CardText>No logs</CardText>
+                    </CardBody>}
             </Card>
+            </Container>
         </Col>
     }
 }

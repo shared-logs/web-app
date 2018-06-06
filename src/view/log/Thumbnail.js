@@ -2,15 +2,15 @@ import React from "react"
 import DeviceThumbnail from "../device/Thumbnail"
 import EntriesThumbnail from "../entries/Thumbnail"
 import {Link} from "react-router-dom";
-import {Button} from "reactstrap";
+import ButtonAdd from "../entry/ButtonAdd";
 
 export default class Thumbnail extends React.Component {
     render() {
         const {log} = this.props
         return <div>
-            <div>
+            <div className="clearfix">
+                <ButtonAdd device={{id: log.device_id}} log={log} caption={true}/>
                 <Link to={`/devices/${log.device_id}/logs/${log.id}`}>{log.name}</Link>&nbsp;
-                <Button tag={Link} to={`/devices/${log.device_id}/logs/${log.id}/add`} color="primary" size="sm">Add an Entry</Button>
             </div>
             <div>
                 {log.device ? <DeviceThumbnail device={log.device} {...this.props}/> : ""}
