@@ -14,7 +14,7 @@ export default class Thumbnail extends React.Component {
             {entry.log ? <div><LogThumbnail log={entry.log} {...this.props}/></div> : ""}
             <h5>{entry.title}</h5>
             <div><small>{humanDate(entry.created)}</small></div>
-            <Markdown source={entry.detail.substr(0, Thumbnail.PREVIEW_LENGTH) + (entry.detail.length > Thumbnail.PREVIEW_LENGTH ? "..." : "")}/>q
+            <Markdown source={entry.detail.substr(0, Thumbnail.PREVIEW_LENGTH) + (entry.detail.length > Thumbnail.PREVIEW_LENGTH ? "..." : "")}/>
             {entry.modified !== entry.created ? <div><small>Modified {humanDate(entry.modified)}</small></div> : ""}
             {entry.user ? <div><UserThumbnail user={entry.user} {...this.props}/></div> : ""}
         </div>
