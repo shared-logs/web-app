@@ -1,7 +1,6 @@
 import React from "react"
 import LogThumbnail from "../log/Thumbnail"
 import UserThumbnail from "../user/Thumbnail"
-import Markdown from "react-rich-markdown"
 import {humanDate} from "../utils";
 
 export default class Thumbnail extends React.Component {
@@ -14,7 +13,7 @@ export default class Thumbnail extends React.Component {
             {entry.log ? <div><LogThumbnail log={entry.log} {...this.props}/></div> : ""}
             <h5>{entry.title}</h5>
             <div><small>{humanDate(entry.created)}</small></div>
-            <Markdown source={entry.detail.substr(0, Thumbnail.PREVIEW_LENGTH) + (entry.detail.length > Thumbnail.PREVIEW_LENGTH ? "..." : "")} options={{sh: false, math: false}}/>
+            <p>{entry.detail.substr(0, Thumbnail.PREVIEW_LENGTH) + (entry.detail.length > Thumbnail.PREVIEW_LENGTH ? "..." : "")}</p>
             {entry.modified !== entry.created ? <div><small>Modified {humanDate(entry.modified)}</small></div> : ""}
             {entry.user ? <div><UserThumbnail user={entry.user} {...this.props}/></div> : ""}
         </div>
