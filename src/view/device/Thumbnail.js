@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import {Card, CardBody, CardHeader, CardText, CardTitle, Col, Container} from "reactstrap";
 import {humanDate} from "../utils";
 import ButtonAdd from "../entry/ButtonAdd";
+import UrlThumbnail from "../url/Thumbnail"
 
 export default class Thumbnail extends React.Component {
     render() {
@@ -25,6 +26,10 @@ export default class Thumbnail extends React.Component {
                     )) : <CardBody>
                         <CardText>No logs</CardText>
                     </CardBody>}
+                {device.urls ? <CardBody>
+                    {device.urls.map(url => (<UrlThumbnail key={`url-${url.id}`} url={url} {...this.props}/>
+                    ))}
+                </CardBody> : ""}
             </Card>
             </Container>
         </Col>

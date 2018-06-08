@@ -1,5 +1,5 @@
 import React from "react"
-import User from "../model/User";
+import User from "../../model/User";
 import {Button, Form, FormGroup, Input, Label} from "reactstrap";
 import {Link} from "react-router-dom";
 

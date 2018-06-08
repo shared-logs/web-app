@@ -2,7 +2,7 @@ import React from "react"
 import Entries from "../entries/Detail";
 import {Link} from "react-router-dom";
 import ButtonAdd from "../entry/ButtonAdd";
-import Shortcut from "../Shortcut";
+import Shortcut from "../ui/Shortcut";
 
 export default class Detail extends React.Component {
     render() {

@@ -2,7 +2,7 @@ import React from "react"
 import QRCode from "qrcode.react"
 import {Button, Modal, ModalBody, ModalFooter, ModalHeader} from "reactstrap"
 import FontAwesome from "react-fontawesome"
-import "../css/Shortcut.css"
+import "../../css/Shortcut.css"
 
 export default class Shortcut extends React.Component {
     constructor(props) {

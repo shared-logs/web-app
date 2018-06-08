@@ -1,5 +1,6 @@
 import Log from "./Log";
 import SharedLogsAPI from "./SharedLogsAPI";
+import Url from "./Url";
 
 export default class Device extends SharedLogsAPI {
     static get MANUFACTURER() {
@@ -16,9 +17,13 @@ export default class Device extends SharedLogsAPI {
 
     constructor(record) {
         super(record)
+        if (this.urls) this.urls.map((record, i, subobject) => {
+            subobject[i] = new Url(record)
+            return true
+        })
         if (this.logs) this.logs.map((record, i, subobject) => {
             subobject[i] = new Log(record)
-            return true;
+            return true
         })
     }
 

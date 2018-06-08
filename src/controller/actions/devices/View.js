@@ -1,7 +1,7 @@
 import React from "react"
 import Device from "../../../model/Device";
 import Detail from "../../../view/device/Detail";
-import Loading from "../../../view/Loading";
+import Loading from "../../../view/ui/Loading";
 
 export default class View extends React.Component {
     constructor(props) {
@@ -10,7 +10,7 @@ export default class View extends React.Component {
     }
 
     componentDidMount() {
-        Device.get(this.props.match.params.device_id, {"include[]": ["logs", "entries", "user"]}, device => {
+        Device.get(this.props.match.params.device_id, {"include[]": ["urls", "logs", "entries", "user"]}, device => {
             this.setState({ device: device })
         })
     }

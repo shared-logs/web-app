@@ -1,7 +1,7 @@
 import React from "react"
 import Device from "../../../model/Device";
 import Thumbnail from "../../../view/devices/Thumbnail";
-import Loading from "../../../view/Loading";
+import Loading from "../../../view/ui/Loading";
 
 export default class Browse extends React.Component {
     constructor(props) {
@@ -10,7 +10,7 @@ export default class Browse extends React.Component {
     }
 
     componentDidMount() {
-        Device.all({"include[]": ["logs", "recent", "user"]}, list => {
+        Device.all({"include[]": ["urls", "logs", "recent", "user"]}, list => {
             this.setState({devices: list})
         })
     }

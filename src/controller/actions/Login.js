@@ -1,7 +1,7 @@
 import React from "react"
 import {Redirect} from "react-router-dom";
 import User from "../../model/User";
-import LoginView from "../../view/Login"
+import LoginView from "../../view/ui/Login"
 
 export default class Login extends React.Component {
     constructor(props) {
