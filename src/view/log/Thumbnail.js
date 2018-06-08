@@ -10,7 +10,7 @@ export default class Thumbnail extends React.Component {
         return <div>
             <div className="clearfix">
                 <ButtonAdd device={{id: log.device_id}} log={log} caption={true}/>
-                <Link to={`/devices/${log.device_id}/logs/${log.id}`}>{log.name}</Link>&nbsp;
+                <h3><Link to={`/devices/${log.device_id}/logs/${log.id}`}>{log.name}</Link></h3>
             </div>
             <div>
                 {log.device ? <DeviceThumbnail device={log.device} {...this.props}/> : ""}
