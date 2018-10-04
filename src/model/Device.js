@@ -15,6 +15,10 @@ export default class Device extends SharedLogsAPI {
         return "name"
     }
 
+    static get DESCRIPTION() {
+        return "description"
+    }
+
     constructor(record) {
         super(record)
         if (this.urls) this.urls.map((record, i, subobject) => {

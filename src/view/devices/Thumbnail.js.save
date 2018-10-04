@@ -1,0 +1,23 @@
+import React from "react"
+import DeviceThumbnail from "../device/Thumbnail";
+import {Container, Row} from "reactstrap";
+
+export default class Thumbnail extends React.Component {
+    render() {
+        const {devices} = this.props
+	var group = devices[0].group
+        return <div>
+            <h1>Devices</h1>
+            <Container>
+		<Row>
+		{devices.forEach(device => {
+			if (device.group != group) {
+				
+				</Row><Row>
+			}
+		}}
+                </Row>
+            </Container>
+        </div>
+    }
+}
